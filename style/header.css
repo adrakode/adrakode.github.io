@@ -1,16 +1,20 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+
+/* ------------------------------------------------------------------------------ */
+/* Header */
+/* ------------------------------------------------------------------------------ */
+
 header {
-    background-color: white;
-    color: black;
+    background-color: transparent;
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;  /* Asegurarse de que cubre todo el ancho */
+    z-index: 1000; /* Mantiene el header por encima de otros elementos */
 }
+
 /* Menú de navegación */
 nav ul {
     list-style-type: none;
@@ -21,18 +25,34 @@ nav ul li {
     display: inline;
     margin-left: 20px;
 }
+
 nav ul li a {
-    color: black;
+    color: white;
     font-weight: bold;
     text-decoration: none;
+    position: relative; /* Designamos la posición del link */
+    display: inline-block;
+    padding-bottom: 2px;
 }
+
+nav ul li a::after {
+    content: ''; /* Contenido por defecto del hover */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease; /* Transición del width */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Cuando se ejecute el hover, la barra se extenderá al 100% de su width */
+}
+
+
 /* Estilos para la imagen */
 .logo img {
     max-width: 100px;
     height: auto;
-}
-.espacioHeader{
-    width: 50%;
-    margin: 0 auto;
-    margin-bottom: 30px;
 }

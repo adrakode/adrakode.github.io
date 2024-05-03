@@ -8,44 +8,8 @@ body {
 }
 
 /* ------------------------------------------------------------------------------ */
-/* Header */
+/* Main */
 /* ------------------------------------------------------------------------------ */
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-/* Menú de navegación */
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-nav ul li {
-    display: inline;
-    margin-left: 20px;
-}
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-/* Estilos para la imagen */
-.logo img {
-    max-width: 100px;
-    height: auto;
-}
-
-.introjuego{
-    background-color: #1AA0F2;
-    width: 80%;
-    padding: 10px;
-    margin: 0 auto;
-    justify-content: left;
-}
 
 main {
     background-color: rgb(230, 158, 132);
@@ -67,12 +31,35 @@ section.images img {
     width: 25%;
 }
 
-img.imgMain{
-    width: 70%;
-    height: 50%;
-    /* object-fit: cover; */
-    border-radius: 20px;
-}/* ------------------------------------------------------------------------------ */
+.imagen {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+img.imgMain {
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.imagen button {
+    background-color: white;
+    width: 200px;
+    height: 50px;
+    position: absolute; 
+    top: 50%;
+    left: 50%; 
+    transform: translate( -50%, -50% );
+    color: black;
+    z-index: 2;
+}
+
+/* ------------------------------------------------------------------------------ */
 /* Footer */
 /* ------------------------------------------------------------------------------ */
 
@@ -116,7 +103,7 @@ footer div ul li a:hover {
 }
 
 footer div ul li a img {
-    width: 30px;
+    width: 20px;
     display: block;
     margin: auto;
 }
