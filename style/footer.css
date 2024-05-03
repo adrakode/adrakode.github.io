@@ -1,0 +1,54 @@
+/* ------------------------------------------------------------------------------ */
+/* Footer */
+/* ------------------------------------------------------------------------------ */
+
+footer {
+    background-color: #344b59;
+    color: white;
+    display: flex;
+
+     /* Distribución equitativa del width */
+    justify-content: space-around;
+
+    /* Alineamos verticalmente */
+    align-items: start;
+    padding: 20px 0px;
+}
+
+footer div {
+    width: 25%;
+    min-height: 150px;
+}
+
+footer div ul {
+    width: fit-content;
+    padding: 0;
+    margin: 0 auto;
+    text-align: left;
+}
+
+footer div ul li {
+    list-style-type: none;
+    padding-top: 5px;
+}
+
+footer div ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer div ul li a:hover {
+    text-decoration: underline;
+}
+
+footer div ul li a img {
+    width: 20px;
+    display: block;
+    margin: auto;
+}
+
+.rrss ul li {
+    display: inline-block;
+
+    padding-right: 10px;
+}
