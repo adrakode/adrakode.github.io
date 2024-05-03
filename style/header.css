@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Menú de navegación */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+nav ul li a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+/* Estilos para la imagen */
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+.espacioHeader{
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
