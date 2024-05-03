@@ -63,3 +63,9 @@ section.images img {
     width: 25%;
 }
 
+img.imgMain{
+    width: 70%;
+    height: 50%;
+    /* object-fit: cover; */
+    border-radius: 20px;
+}
