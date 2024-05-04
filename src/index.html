@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/juegos.css">
     <link rel="shortcut icon" href="/icon/imagenLogin.png" type="image/x-icon">
 </head>
 <body>
@@ -20,31 +21,215 @@
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="#">Quienes somos</a></li>
                 <li><a href="juegos.html">Juegos</a></li>
                 <li><a href="#">Productos</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="clientes/login.html">Clientes</a></li>
+                <li><a href="#">Personajes</a></li>
+                <li><a href="#">Quienes somos</a></li>
+                <li class="li_button"><a href="clientes/login.html">Área Clientes</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="containerHeader">
-        <div class="imagen">
-            
-        </div>
-        <div class="texto">
-        </div>
-    </div>
-
     <div class="imagen">
         <img class="imgMain" src="img/juegos/wallpaper2.jpeg" alt="">
-        <button>
-            <p>Comprar</p>
-        </button>
-    
+        <div class="imgTexto">
+            <h1>Explora, Conquista y Alcanza tu Cima</h1>
+
+            <div class="textContainer">
+                <p>Sumérgete en un mundo lleno de posibilidades y peligros. Inspirado en Elden Ring, Dark Souls y más, AdraKode te desafía a descubrir tu verdadero destino.</p>
+            </div>
+
+            <a href="clientes/login.html">Iniciar sesión</a>
+            <a href="#" class="transparent_link">Ver más <img src="/src/icon/arrow-right-solid.svg" alt=""></a>
+        </div>
     </div>
 
+
+    <!-- Cards -->
+    <h1 class="titulo">NUESTROS JUEGOS</h1>
+    <p class="texto_centrado">Explora nuestra colección cuidadosamente seleccionada y descubre<br> tu próximo juego favorito en Adrakode</p>
+    <div class="containerflip">
+        <div class="card">
+            <!-- parte delantera de nuestra carta -->
+            <div class="face front">
+                <img src="img/juegos/juegofondo.jpg" alt="">
+                <h3>Juego 1</h3>
+            </div>
+    
+            <!-- parte trasera de nuestra carta -->
+            <div class="face back">
+                <h3>Juego 1</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sint omnis totam adipisci cumque commodi dolorum fugiat sapiente mollitia sit voluptas ex fugit suscipit doloribus, architecto sequi, iusto possimus officia.
+                </p>
+                <div class="link"><a href="#">Más información</a></div>
+            </div>
+        </div>
+        <div class="card">
+            <!-- parte delantera de nuestra carta -->
+            <div class="face front">
+                <img src="img/juegos/juegofondo.jpg" alt="">
+                <h3>Juego 2</h3>
+            </div>
+    
+            <!-- parte trasera de nuestra carta -->
+            <div class="face back">
+                <h3>Juego 2</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sint omnis totam adipisci cumque commodi dolorum fugiat sapiente mollitia sit voluptas ex fugit suscipit doloribus, architecto sequi, iusto possimus officia.
+                </p>
+                <div class="link"><a href="#">Más información</a></div>
+            </div>
+        </div>
+        <div class="card">
+            <!-- parte delantera de nuestra carta -->
+            <div class="face front">
+                <img src="img/juegos/juegofondo.jpg" alt="">
+                <h3>Juego 3</h3>
+            </div>
+    
+            <!-- parte trasera de nuestra carta -->
+            <div class="face back">
+                <h3>Juego 3</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sint omnis totam adipisci cumque commodi dolorum fugiat sapiente mollitia sit voluptas ex fugit suscipit doloribus, architecto sequi, iusto possimus officia.
+                </p>
+                <div class="link"><a href="#">Más información</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="productos">
+        <h1 class="titulo">PRODUCTOS</h1>
+        <p class="texto_centrado">Accede a todos nuestros títulos RPG por suscripción y vive emocionantes <br> aventuras sin límites. ¡Únete hoy y empieza a jugar!</p>
+
+        <div class="planes">
+            <div class="plan">
+                <h3>Plan gratuito</h3>
+                <button>Empieza gratis</button>
+                <ul>
+                    <li>Acceso a un juego en modo offline</li>
+                    <li>Actualizaciones regulares del juego</li>
+                    <li>Acceso a foro comunitario</li>
+                    <li>Soporte básico por correo</li>
+                </ul>
+            </div>
+            <div class="plan">
+
+                <div class="plan-avanzado">
+
+                    <h3>Plan avanzado</h3>
+                    <p>Más popular</p>
+                </div>
+
+                <button>Inscríbete ahora</button>
+                <ul>
+                    <li>Acceso ilimitado a todos los juegos</li>
+                    <li>Modo online</li>
+                    <li>Acceso a estadísticas y logros</li>
+                    <li>Personalización de perfil de usuario</li>
+                    <li>Decuentos exclusivos en DLCs</li>
+                    <li>Soporte avanzado</li>
+                </ul>
+            </div>
+            <div class="plan">
+                <h3>Plan premium</h3>
+                <button>Inscríbete ahora</button>
+                <ul>
+                    <li>Acceso anticipado a versiones beta</li>
+                    <li>Crear y gestionar servidores privados</li>
+                    <li>Acceso exclusivo a DLCs</li>
+                    <li>Participación en torneos exclusivos</li>
+                    <li>Invitaciones a eventos especiales</li>
+                    <li>Sesiones de juego con desarrolladores</li>
+                    <li>Avatares y temas personalizados</li>
+                    <li>Soporte premium 24/7</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="personajes">
+        <h1 class="titulo">DESCRUBRE LOS PERSONAJES</h1>
+        <p class="texto_centrado">Desde valientes héroes hasta astutos villanos, cada personaje está<br>meticulosamente diseñado para cautivar tu imaginación y<br>enriquecer tu experiencia de juego</p>
+
+        <div class="containerflip">
+            <div class="card">
+                <!-- parte delantera de nuestra carta -->
+                <div class="face front">
+                    <img src="img/juegos/juegofondo.jpg" alt="">
+                    <h3>Juego 1</h3>
+                </div>
+        
+                <!-- parte trasera de nuestra carta -->
+                <div class="face back">
+                    <h3>Juego 1</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sint omnis totam adipisci cumque commodi dolorum fugiat sapiente mollitia sit voluptas ex fugit suscipit doloribus, architecto sequi, iusto possimus officia.
+                    </p>
+                    <div class="link"><a href="#">Más información</a></div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- parte delantera de nuestra carta -->
+                <div class="face front">
+                    <img src="img/juegos/juegofondo.jpg" alt="">
+                    <h3>Juego 2</h3>
+                </div>
+        
+                <!-- parte trasera de nuestra carta -->
+                <div class="face back">
+                    <h3>Juego 2</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sint omnis totam adipisci cumque commodi dolorum fugiat sapiente mollitia sit voluptas ex fugit suscipit doloribus, architecto sequi, iusto possimus officia.
+                    </p>
+                    <div class="link"><a href="#">Más información</a></div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- parte delantera de nuestra carta -->
+                <div class="face front">
+                    <img src="img/juegos/juegofondo.jpg" alt="">
+                    <h3>Juego 3</h3>
+                </div>
+        
+                <!-- parte trasera de nuestra carta -->
+                <div class="face back">
+                    <h3>Juego 3</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sint omnis totam adipisci cumque commodi dolorum fugiat sapiente mollitia sit voluptas ex fugit suscipit doloribus, architecto sequi, iusto possimus officia.
+                    </p>
+                    <div class="link"><a href="#">Más información</a></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <h1 class="titulo">QUIENES SOMOS</h1>
+    <br><br><br><br>
+
+    <div class="quienes_somos">
+
+        <div class="parrafo_izq">
+            <h3>NUESTRA HISTORIA</h3>
+            <p>En AdraKode, nuestra pasión es crear experiencias de juego inolvidables. Desde<br>nuestros inicios como un equipo apasionado hasta convertirnos en una<br>plataforma líder en juego de rol, nos dedicamos a inspirar, entretener y conectar<br>a jugadores de todo el mundo.</p>
+        </div>
+        <div class="parrafo_der">
+            <h3>NUESTRA MISIÓN</h3>
+            <p>Impulsamos los límites de la narrativa y la innovación técnica para ofrecer<br> experiencias que desafíen la imaginación y provoquen emociones duraderas.</p>
+        </div>
+        <div class="parrafo_izq">
+            <h3>NUESTRO COMPROMISO</h3>
+            <p>Valoramos la retroalimentación de nuestros jugadores y nos esforzamos por<br> mantener estándares de excelencia en todo lo que hacemos. Nos <br>comprometemos a superar las experiencias de nuestros jugadores en cada paso <br>del camino.</p>
+        </div>
+        <div class="parrafo_der">
+            <h3>ÚNETE A NOSOTROS</h3>
+            <p>Ya seas un jugador ávido o un desarrollador creativo, te invitamos a unirte a<br>nosotros en nuestra búsqueda para explorar nuevos mundo y forjar nuevas<br>leyendas. ¡Juntos, podemos crear algo extraordinario!</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
 
         <!-- Información -->
@@ -81,11 +266,11 @@
         <!-- RRSS -->
         <div class="rrss">
             <ul>
-                <li><a href="#"><img src="/icon/x-twitter.svg" alt=""></a></li>
-                <li><a href="#"><img src="/icon/facebook-f.svg" alt=""></a></li>
-                <li><a href="#"><img src="/icon/instagram.svg" alt=""></a></li>
-                <li><a href="#"><img src="/icon/reddit-alien.svg" alt=""></a></li>
-                <li><a href="#"><img src="/icon/youtube.svg" alt=""></a></li>
+                <li><a href="#"><img src="icon/x-twitter.svg" alt=""></a></li>
+                <li><a href="#"><img src="icon/facebook-f.svg" alt=""></a></li>
+                <li><a href="#"><img src="icon/instagram.svg" alt=""></a></li>
+                <li><a href="#"><img src="icon/reddit-alien.svg" alt=""></a></li>
+                <li><a href="#"><img src="icon/youtube.svg" alt=""></a></li>
             </ul>
         </div>
     </footer>

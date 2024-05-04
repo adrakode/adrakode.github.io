@@ -3,8 +3,8 @@
 /* ------------------------------------------------------------------------------ */
 
 footer {
-    background-color: #344b59;
-    color: white;
+    background-color: black;
+    color: #ccc;
     display: flex;
 
      /* Distribución equitativa del width */
@@ -13,6 +13,7 @@ footer {
     /* Alineamos verticalmente */
     align-items: start;
     padding: 20px 0px;
+    margin-top: 100px;
 }
 
 footer div {
@@ -33,7 +34,7 @@ footer div ul li {
 }
 
 footer div ul li a {
-    color: white;
+    color: #ccc;
     text-decoration: none;
 }
 
