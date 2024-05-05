@@ -72,8 +72,9 @@ img.imgMain {
 
 .imagen .imgTexto h1 {
     color: white;
-    font-size: 60px;
-    line-height: 100px;
+    font-size: 40px;
+    line-height: 70px;
+    margin-bottom: 10px;
 }
 
 .imagen .imgTexto .textContainer {
@@ -81,6 +82,7 @@ img.imgMain {
     color: white;
     font-size: 18px;
     line-height: 5vh;
+    margin-bottom: 14px;
 }
 
 .imagen .imgTexto a {
