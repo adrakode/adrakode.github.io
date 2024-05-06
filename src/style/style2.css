@@ -1,0 +1,452 @@
+/* ------------------------------------------------------------------------------ */
+/* Reset */
+/* ------------------------------------------------------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* Header */
+/* ------------------------------------------------------------------------------ */
+
+header {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #1AA0F2;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.li_button {
+    border-radius: 10px;
+    background-color: black;
+    padding: 10px;
+    transition: ease 0.5s;
+}
+
+.li_button:hover {
+    border-radius: 10px;
+    background-color: #1AA0F2;
+    padding: 10px;
+}
+
+.li_button a {
+    color: white;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* Main */
+/* ------------------------------------------------------------------------------ */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eff3f4;
+    font-family: Arial, sans-serif;
+}
+
+.titulo {
+    font-size: 48px;
+    color: black;
+    text-align: center;
+}
+
+.texto_centrado {
+    padding: 10px 0;
+    text-align: center;
+    line-height: 30px;
+}
+
+button {
+    cursor: pointer;
+}
+
+main {
+    background-color: rgb(230, 158, 132);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main section {
+    width: 100%;
+}
+
+section.images {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.images img {
+    height: 100px;
+    width: 25%;
+}
+
+.imagen {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+img.imgMain {
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.imagen .imgTexto {
+    width: 33%;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.imagen .imgTexto h1 {
+    color: white;
+    font-size: 40px;
+    line-height: 70px;
+    margin-bottom: 10px;
+}
+
+.imagen .imgTexto .textContainer {
+    width: 70%;
+    color: white;
+    font-size: 18px;
+    line-height: 5vh;
+    margin-bottom: 14px;
+}
+
+.imagen .imgTexto a {
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+}
+
+a.transparent_link {
+    background-color: transparent !important;
+    color: white !important;
+}
+
+a.transparent_link img {
+    margin-left: 4px;
+    width: 8px;
+}
+
+.planes {
+    height: fit-content;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 20px 0px;
+}
+
+.plan {
+    width: 30%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.plan:nth-child(2) {
+    background-color: black;
+    color: white;
+}
+
+.plan:nth-child(2) button {
+    background-color: white;
+    color: black;
+}
+
+.plan:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 1);
+    transform: translate(-10px, 10px);
+}
+
+.plan-avanzado h3 {
+    color: white;
+    margin: 0;
+}
+
+.plan-avanzado a {
+    text-decoration: none;
+    color: white;
+}
+
+.plan button {
+    color: white;
+    background-color: black;
+    margin: 20px 0;
+    border: 0px;
+    border-radius: 10px;
+    height: 5vh;
+    width: 100%;
+}
+
+.plan ul {
+    list-style-type: none;
+}
+
+.plan ul li::before {
+    content: '✓ ';
+}
+
+.plan ul li {
+    padding: 10px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .planes {
+        flex-direction: column;
+        align-items: center;
+    }
+    .plan {
+        width: 300px;
+        margin-bottom: 20px;
+    }
+}
+
+/* ------------------------------------------------------------------------------ */
+/* Personajes */
+/* ------------------------------------------------------------------------------ */
+
+.personajes {
+    margin-top: 100px;
+    min-height: 70vh;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* Quiénes somos */
+/* ------------------------------------------------------------------------------ */
+
+.quienes_somos {
+    width: 60%;
+    margin: auto auto 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.quienes_somos .parrafo_der h3,
+.quienes_somos .parrafo_izq h3 {
+    font-size: 24px;
+    color: black;
+}
+
+.quienes_somos .parrafo_der h3 {
+    align-self: end;
+}
+
+.parrafo_izq {
+    align-self: start;
+}
+
+.parrafo_der {
+    align-self: end;
+    text-align: right;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* Footer */
+/* ------------------------------------------------------------------------------ */
+
+footer {
+    background-color: black;
+    color: #ccc;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding: 20px 0px;
+    margin-top: 100px;
+}
+
+footer div {
+    width: 25%;
+    min-height: 150px;
+}
+
+footer div ul {
+    width: fit-content;
+    padding: 0;
+    margin: 0 auto;
+    text-align: left;
+}
+
+footer div ul li {
+    list-style-type: none;
+    padding-top: 5px;
+}
+
+footer div ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+footer div ul li a:hover {
+    text-decoration: underline;
+}
+
+footer div ul li a img {
+    width: 20px;
+    display: block;
+    margin: auto;
+}
+
+.rrss ul li {
+    display: inline-block;
+    padding-right: 10px;
+}
+.containerflip{
+    display: flex;
+    /* propiedades para alinear las cartas mejor */
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: center;
+    min-height: 70vh;
+    /* background-color: #f1f1f1;  */
+    background-image: url(img/fondo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    /* Aplicar margenes con resto de cartas */
+    margin: 20px;
+}
+.card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0px 5px 10px black;
+}
+.card .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* indica como el contenido de un elemento deberá ser redimensionado para ajustarse a su contenedor */
+    object-fit: cover;
+}
+.card .front h3{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    background: rgb(0, 0, 0,0.4);
+    text-align: center;
+}
+.card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: #1AA0F2;
+    padding: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0px 5px 10px black;
+}
+.card .back .link{
+    border-top: 1px solid white;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card .back .link a{
+    color: white;
+}
+
+.card .back h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+.card .back p{
+    letter-spacing: 1px;
+}
+.card:hover .front{
+    transform: perspective(600px)rotateY(180deg);
+}
+.card:hover .back{
+    transform: perspective(600px)rotateY(360deg);
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+}
