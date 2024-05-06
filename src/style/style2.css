@@ -32,6 +32,8 @@ nav ul {
 }
 
 nav ul li {
+    padding: 5px;
+    margin: 0 20px;
     display: inline;
     margin-left: 20px;
 }
@@ -170,7 +172,7 @@ img.imgMain {
     margin-bottom: 14px;
 }
 
-.imagen .imgTexto a {
+.imagen .imgTexto a.normal_link {
     color: black;
     text-decoration: none;
     border-radius: 10px;
@@ -178,9 +180,9 @@ img.imgMain {
     padding: 10px;
 }
 
-a.transparent_link {
-    background-color: transparent !important;
-    color: white !important;
+.transparent_link {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
 }
 
 a.transparent_link img {
