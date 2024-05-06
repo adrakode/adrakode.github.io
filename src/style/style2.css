@@ -231,8 +231,14 @@ a.transparent_link img {
 .plan-avanzado h3 {
     color: white;
     margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
 }
-
+.popular {
+    padding: 5px;
+    font-size: 12px;
+}
 .plan-avanzado a {
     text-decoration: none;
     color: white;
