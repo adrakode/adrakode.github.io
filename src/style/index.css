@@ -17,7 +17,7 @@ body {
     line-height: 30px;
 }
 
-button {
+button {    
     cursor: pointer;
 }
 
@@ -152,7 +152,7 @@ a.transparent_link img {
 }
 
 .plan-avanzado h3 {
-    color: #aaa8a88b;
+    color: white;
     margin: 0;
 }
 
