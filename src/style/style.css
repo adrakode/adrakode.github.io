@@ -20,7 +20,6 @@ p, a, ul, ol{
     font-style: normal;
 }
 
-
 /* ------------------------------------------------------------------------------ */
 /* Header */
 /* ------------------------------------------------------------------------------ */
@@ -100,7 +99,7 @@ header p{
 
 /* Generales */
 
-.mod_button_white {
+.mod_button {
     border-radius: 10px;
     background-color: white;
     padding: 10px;
@@ -109,39 +108,32 @@ header p{
     text-align: center;
 }
 
-.mod_button.white a {
+.mod_button a {
     text-decoration: none;
+    color: black;
 }
 
-.mod_button_white:hover {
+.mod_button:hover {
     border-radius: 10px;
     background-color: #1AA0F2;
     padding: 10px;
 
-    a{
+    a {
         transition: ease 0.5s;
         color: white;
     }
 }
 
-.mod_button_black {
-    border-radius: 10px;
+.mod_button.black {
     background-color: black;
-    padding: 10px;
-    margin: 10px 0;
-    transition: ease 0.5s;
-    text-align: center;
 }
 
-.mod_button_black a {
-    text-decoration: none;
+.mod_button.black a {
     color: white;
 }
 
-.mod_button_black:hover {
-    border-radius: 10px;
+.mod_button.black:hover {
     background-color: #1AA0F2;
-    padding: 10px;
 }
 
 .col_white{
@@ -498,4 +490,15 @@ footer div ul li a img {
 
 .card:hover .back {
     transform: perspective(600px)rotateY(360deg);
+}
+
+/* Flecha flotante */
+#floating_arrow {
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 30px;
 }
