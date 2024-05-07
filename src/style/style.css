@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: 1.5s ease;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -402,12 +404,6 @@ footer div ul li a img {
     /* align-items: center; */
     justify-content: center;
     min-height: 50vh;
-    /* background-color: #f1f1f1;  */
-    background-image: url(img/fondo.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
 }
 
 .card {
@@ -501,4 +497,5 @@ footer div ul li a img {
     bottom: 0;
     right: 0;
     margin: 30px;
+    transition: 2.5s ease;
 }
