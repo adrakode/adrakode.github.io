@@ -3,48 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adrakode</title>
+    <title col_black>Adrakode</title col_black>
     <link rel="shortcut icon" href="icon/icono.png" type="image/x-icon">
     <link rel="stylesheet" href="style/style2.css">
 </head>
 <body>
-    <header>
+    <header class="bg_transparent" id="header">
         <!-- Logo en la izquierda -->
-        <div class="logo">
-            <a href="index.html"><img src="icon/imagenLogin.png" width="50px" alt="Logo"></a>
-        </div>
+        <a href="index.html"><img src="icon/imagenLogin.png" class="logo" alt="Logo"></a>
 
         <!-- Menú en la derecha -->
         <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nuestrosjuegos">Juegos</a></li>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#personajesMenu">Personajes</a></li>
-                <li><a href="#quienessomos">Quienes somos</a></li>
-                <li class="li_button"><a href="clientes/login.html">Área Clientes</a></li>
+            <ul id="ul_navbar" class="col_white">
+                <li><a href="#inicio"><p>Inicio</p></a></li>
+                <li><a href="#nuestros_juegos"><p>Juegos</p></a></li>
+                <li><a href="#productos"><p>Productos</p></a></li>
+                <li><a href="#personajes_menu"><p>Personajes</p></a></li>
+                <li><a href="#quienes_somos"><p>Quienes somos</p></a></li>
+                <li class="mod_button_black"><a href="clientes/login.html" class="col_white">Área Clientes</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="imagen" id="inicio">
-        <img class="imgMain" src="img/juegos/wallpaper2.jpeg" alt="">
-        <div class="imgTexto">
-            <h1>Explora, Conquista y Alcanza tu Cima</h1>
+    <div class="wallpaper" id="inicio">
+        <img src="img/juegos/wallpaper2.jpeg" alt="">
+        <div>
+            <h1 class="col_white">Explora, Conquista y Alcanza tu Cima</h1>
 
-            <div class="textContainer">
+            <div class="wallpaper_description col_white">
                 <p>Sumérgete en un mundo lleno de posibilidades y peligros. Inspirado en Elden Ring, Dark Souls y más, AdraKode te desafía a descubrir tu verdadero destino.</p>
             </div>
 
-            <a class="normal_link" href="clientes/login.html">Iniciar sesión</a>
-            <a href="#" class="transparent_link">Ver más <img src="icon/arrow-right-solid.svg" alt=""></a>
+            <span class="mod_button_white" style="margin-right: 10px;"><a href="clientes/login.html">Iniciar sesión</a></span>
+            <a class="col_white bg black" href="#">Ver más <img class="right_arrow" src="icon/arrow-right-solid.svg" alt=""></a>
         </div>
     </div>
 
 
     <!-- Cards -->
-    <h1 class="titulo" id="nuestrosjuegos">NUESTROS JUEGOS</h1>
-    <p class="texto_centrado">Explora nuestra colección cuidadosamente seleccionada y descubre<br> tu próximo juego favorito en Adrakode</p>
+    <h1 class="title col_black" id="nuestros_juegos">NUESTROS JUEGOS</h1>
+    <p class="centered_text">Explora nuestra colección cuidadosamente seleccionada y descubre<br> tu próximo juego favorito en Adrakode</p>
     <div class="containerflip">
         <div class="card">
             <!-- parte delantera de nuestra carta -->
@@ -59,7 +57,7 @@
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sint omnis totam adipisci cumque commodi dolorum fugiat sapiente mollitia sit voluptas ex fugit suscipit doloribus, architecto sequi, iusto possimus officia.
                 </p>
-                <div class="link"><a href="#">Más información</a></div>
+                <div class="card_link"><a href="#">Más información</a></div>
             </div>
         </div>
         <div class="card">
@@ -75,7 +73,7 @@
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sint omnis totam adipisci cumque commodi dolorum fugiat sapiente mollitia sit voluptas ex fugit suscipit doloribus, architecto sequi, iusto possimus officia.
                 </p>
-                <div class="link"><a href="#">Más información</a></div>
+                <div class="card_link"><a href="#">Más información</a></div>
             </div>
         </div>
         <div class="card">
@@ -91,20 +89,22 @@
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sint omnis totam adipisci cumque commodi dolorum fugiat sapiente mollitia sit voluptas ex fugit suscipit doloribus, architecto sequi, iusto possimus officia.
                 </p>
-                <div class="link"><a href="#">Más información</a></div>
+                <div class="card_link"><a href="#">Más información</a></div>
             </div>
         </div>
     </div>
 
     <div id="productos">
-        <h1 class="titulo">PRODUCTOS</h1>
-        <p class="texto_centrado">Accede a todos nuestros títulos RPG por suscripción y vive emocionantes <br> aventuras sin límites. ¡Únete hoy y empieza a jugar!</p>
+        <h1 class="title col_black">PRODUCTOS</h1>
+        <p class="centered_text">Accede a todos nuestros títulos RPG por suscripción y vive emocionantes <br> aventuras sin límites. ¡Únete hoy y empieza a jugar!</p>
 
         <div class="planes">
             <div class="plan">
                 <h3>Plan gratuito</h3>
-                <button>Empieza gratis</button>
-                <h2>0€/mes</h2>
+                <h1>0€/mes</h1>
+
+                <span class="mod_button_black"><a href="clientes/login.html">Empieza gratis</a></span>
+
                 <ul>
                     <li>Acceso a un juego en modo offline</li>
                     <li>Actualizaciones regulares del juego</li>
@@ -114,13 +114,14 @@
             </div>
             <div class="plan">
 
-                <div class="plan-avanzado">
-
-                    <h3>Plan avanzado <span class="popular">Más popular</span></h3>
+                <div class="advanced-plan col_white">
+                    <h3>Plan avanzado <span>Más popular</span></h3>
                     <!-- <p>Más popular</p> -->
                 </div>
-                <h2>9€/mes</h2>
-                <button>Inscríbete ahora</button>
+
+                <h1>9€/mes</h1>
+                <span class="mod_button_white"><a href="clientes/login.html">Iniciar sesión</a></span>
+
                 <ul>
                     <li>Acceso ilimitado a todos los juegos</li>
                     <li>Modo online</li>
@@ -132,8 +133,10 @@
             </div>
             <div class="plan">
                 <h3>Plan premium</h3>
-                <h2>19€/mes</h2>
-                <button>Inscríbete ahora</button>
+                <h1>19€/mes</h1>
+
+                <span class="mod_button_black"><a href="clientes/login.html">Inscríbete ahora</a></span>
+                
                 <ul>
                     <li>Acceso anticipado a versiones beta</li>
                     <li>Crear y gestionar servidores privados</li>
@@ -148,9 +151,9 @@
         </div>
     </div>
 
-    <div class="personajes" id="personajesMenu">
-        <h1 class="titulo">DESCRUBRE LOS PERSONAJES</h1>
-        <p class="texto_centrado">Desde valientes héroes hasta astutos villanos, cada personaje está<br>meticulosamente diseñado para cautivar tu imaginación y<br>enriquecer tu experiencia de juego</p>
+    <div class="personajes" id="personajes_menu">
+        <h1 class="title col_black">DESCRUBRE LOS PERSONAJES</h1>
+        <p class="centered_text">Desde valientes héroes hasta astutos villanos, cada personaje está<br>meticulosamente diseñado para cautivar tu imaginación y<br>enriquecer tu experiencia de juego</p>
 
         <div class="containerflip">
             <div class="card">
@@ -164,7 +167,7 @@
                 <div class="face back">
                     <h3>Ryder Swiftwind</h3>
                     <p>
-                        Nadie sabe de dónde viene Seren. Algunos dicen que es un espíritu ancestral, mientras que otros creen que es un exiliado de un reino lejano. Su pasado permanece envuelto en sombras.                    <div class="link"><a href="#">Más información</a></div>
+                        Nadie sabe de dónde viene Seren. Algunos dicen que es un espíritu ancestral, mientras que otros creen que es un exiliado de un reino lejano. Su pasado permanece envuelto en sombras.                    <div class="card_link"><a href="#">Más información</a></div>
                 </div>
             </div>
             <div class="card">
@@ -179,7 +182,7 @@
                     <h3>Seren Emberfall</h3>
                     <p>
                         Nadie sabe de dónde viene Seren. Algunos dicen que es un espíritu ancestral, mientras que otros creen que es un exiliado de un reino lejano. Su pasado permanece envuelto en sombras.                    </p>
-                    <div class="link"><a href="#">Más información</a></div>
+                    <div class="card_link"><a href="#">Más información</a></div>
                 </div>
             </div>
             <div class="card">
@@ -194,38 +197,70 @@
                     <h3>Thorn Ironclad</h3>
                     <p>
                         Nadie sabe de dónde surgió Thorn Ironclad. Algunos dicen que emergió de las profundidades de un antiguo volcán, mientras que otros creen que fue forjado por los dioses mismos. Su piel está marcada con runas ancestrales que brillan con un fulgor dorado al tocar la luz de l                    </p>
-                    <div class="link"><a href="#">Más información</a></div>
+                    <div class="card_link"><a href="#">Más información</a></div>
                 </div>
             </div>
         </div>
 
     </div>
 
-    <h1 class="titulo" id="quienessomos">QUIENES SOMOS</h1>
     <br><br><br><br>
 
-    <div class="quienes_somos">
+    <h1 class="title col_black" id="quienes_somos">QUIENES SOMOS</h1>
 
-        <div class="parrafo_izq">
-            <h3>NUESTRA HISTORIA</h3>
-            <p>En AdraKode, nuestra pasión es crear experiencias de juego inolvidables. Desde<br>nuestros inicios como un equipo apasionado hasta convertirnos en una<br>plataforma líder en juego de rol, nos dedicamos a inspirar, entretener y conectar<br>a jugadores de todo el mundo.</p>
+    <div class="quienes_somos">
+        <div class="row left">
+    
+            <img src="icon/book-open-solid.svg" width="100px" alt="">
+
+            <div class="block">
+                <div>
+                    <h3>NUESTRA HISTORIA</h3>
+                    <p>En AdraKode, nuestra pasión es crear experiencias de juego inolvidables. Desde<br>nuestros inicios como un equipo apasionado hasta convertirnos en una<br>plataforma líder en juego de rol, nos dedicamos a inspirar, entretener y conectar<br>a jugadores de todo el mundo.</p>
+                </div>
+            </div>
         </div>
-        <div class="parrafo_der">
-            <h3>NUESTRA MISIÓN</h3>
-            <p>Impulsamos los límites de la narrativa y la innovación técnica para ofrecer<br> experiencias que desafíen la imaginación y provoquen emociones duraderas.</p>
+
+        <div class="row right">
+
+            <div class="block">
+                <div>
+                    <h3>NUESTRA MISIÓN</h3>
+                    <p>Impulsamos los límites de la narrativa y la innovación técnica para ofrecer<br> experiencias que desafíen la imaginación y provoquen emociones duraderas.</p>
+                </div>
+            </div>
+    
+            <img src="icon/check-solid.svg" width="100px" alt="">
         </div>
-        <div class="parrafo_izq">
-            <h3>NUESTRO COMPROMISO</h3>
-            <p>Valoramos la retroalimentación de nuestros jugadores y nos esforzamos por<br> mantener estándares de excelencia en todo lo que hacemos. Nos <br>comprometemos a superar las experiencias de nuestros jugadores en cada paso <br>del camino.</p>
+
+        <div class="row left">
+    
+            <img src="icon/users-solid.svg" width="100px" alt="">
+
+            <div class="block">
+                <div>
+                    <h3>NUESTRO COMPROMISO</h3>
+                    <p>Valoramos la retroalimentación de nuestros jugadores y nos esforzamos por<br> mantener estándares de excelencia en todo lo que hacemos. Nos <br>comprometemos a superar las experiencias de nuestros jugadores en cada paso <br>del camino.</p>
+                </div>
+            </div>
         </div>
-        <div class="parrafo_der">
-            <h3>ÚNETE A NOSOTROS</h3>
-            <p>Ya seas un jugador ávido o un desarrollador creativo, te invitamos a unirte a<br>nosotros en nuestra búsqueda para explorar nuevos mundo y forjar nuevas<br>leyendas. ¡Juntos, podemos crear algo extraordinario!</p>
+
+        <div class="row right">    
+            <div class="block">
+                <div>
+                    <h3>ÚNETE A NOSOTROS</h3>
+                    <p>Ya seas un jugador ávido o un desarrollador creativo, te invitamos a unirte a<br>nosotros en nuestra búsqueda para explorar nuevos mundo y forjar nuevas<br>leyendas. ¡Juntos, podemos crear algo extraordinario!</p>
+                </div>
+            </div>
+    
+            <img src="icon/file-pen-solid.svg" width="100px" alt="">
+
         </div>
+
     </div>
 
     <!-- Footer -->
-    <footer>
+    <footer class="bg_black">
 
         <!-- Información -->
         <div>
@@ -270,4 +305,6 @@
         </div>
     </footer>
 </body>
+
+<script src="js/script.js"></script>
 </html>

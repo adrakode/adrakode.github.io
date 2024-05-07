@@ -9,12 +9,15 @@
     font-family: Arial, sans-serif;
 }
 
+body {
+    background-color: #eff3f4;
+}
+
 /* ------------------------------------------------------------------------------ */
 /* Header */
 /* ------------------------------------------------------------------------------ */
 
 header {
-    background-color: white;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -23,6 +26,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
+    transition: background-color 0.5s ease;
 }
 
 nav ul {
@@ -38,8 +42,7 @@ nav ul li {
     margin-left: 20px;
 }
 
-nav ul li a {
-    color: black;
+nav ul li a p {
     font-weight: bold;
     text-decoration: none;
     position: relative;
@@ -47,7 +50,7 @@ nav ul li a {
     padding-bottom: 2px;
 }
 
-nav ul li a::after {
+nav ul li a p::after {
     content: '';
     position: absolute;
     left: 0;
@@ -58,88 +61,109 @@ nav ul li a::after {
     transition: width 0.3s ease;
 }
 
-nav ul li a:hover::after {
+nav ul li a p:hover::after {
     width: 100%;
 }
 
-.logo img {
-    max-width: 100px;
+.logo {
+    width: 50px;
     height: auto;
     margin-right: 20px;
 }
 
-.li_button {
+/* Generales */
+
+.mod_button_white {
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0;
+    transition: ease 0.5s;
+    text-align: center;
+}
+
+.mod_button_white a {
+    text-decoration: none;
+}
+
+.mod_button_white:hover {
+    border-radius: 10px;
+    background-color: #1AA0F2;
+    padding: 10px;
+
+    a {
+        transition: ease 0.5s;
+        color: white;
+    }
+}
+
+.mod_button_black {
     border-radius: 10px;
     background-color: black;
     padding: 10px;
+    margin: 10px 0;
     transition: ease 0.5s;
+    text-align: center;
 }
 
-.li_button:hover {
+.mod_button_black a {
+    text-decoration: none;
+    color: white;
+}
+
+.mod_button_black:hover {
     border-radius: 10px;
     background-color: #1AA0F2;
     padding: 10px;
 }
 
-.li_button a {
+.col_white {
     color: white;
 }
 
-/* ------------------------------------------------------------------------------ */
-/* Main */
-/* ------------------------------------------------------------------------------ */
-
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #eff3f4;
-    font-family: Arial, sans-serif;
+.bg_white {
+    background-color: white;
 }
 
-.titulo {
-    font-size: 48px;
+.col_black {
     color: black;
-    text-align: center;
 }
 
-.texto_centrado {
-    padding: 10px 0;
-    text-align: center;
-    line-height: 30px;
+.bg_black {
+    background-color: black;
+}
+
+.col_blue {
+    color: #1AA0F2;
+}
+
+.bg_transparent {
+    background-color: transparent;
 }
 
 button {
     cursor: pointer;
 }
 
-main {
-    background-color: rgb(230, 158, 132);
-    display: flex;
-    flex-wrap: wrap;
+.title {
+    font-size: 48px;
+    text-align: center;
 }
 
-main section {
-    width: 100%;
+.centered_text {
+    padding: 10px 0;
+    text-align: center;
+    line-height: 30px;
 }
 
-section.images {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-section.images img {
-    height: 100px;
-    width: 25%;
-}
-
-.imagen {
+.wallpaper {
     position: relative;
     display: block;
     width: 100%;
     height: auto;
 }
 
-img.imgMain {
+.wallpaper > img {
     display: block;
     margin: auto;
     margin-bottom: 10px;
@@ -148,7 +172,7 @@ img.imgMain {
     z-index: 1;
 }
 
-.imagen .imgTexto {
+.wallpaper > div {
     width: 33%;
     position: absolute;
     top: 40%;
@@ -157,35 +181,20 @@ img.imgMain {
     z-index: 2;
 }
 
-.imagen .imgTexto h1 {
-    color: white;
+.wallpaper div h1 {
     font-size: 40px;
     line-height: 70px;
     margin-bottom: 10px;
 }
 
-.imagen .imgTexto .textContainer {
+.wallpaper_description {
     width: 70%;
-    color: white;
     font-size: 18px;
     line-height: 5vh;
     margin-bottom: 14px;
 }
 
-.imagen .imgTexto a.normal_link {
-    color: black;
-    text-decoration: none;
-    border-radius: 10px;
-    background-color: white;
-    padding: 10px;
-}
-
-.transparent_link {
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
-}
-
-a.transparent_link img {
+.right_arrow {
     margin-left: 4px;
     width: 8px;
 }
@@ -213,14 +222,14 @@ a.transparent_link img {
     justify-content: space-between;
 }
 
+.plan h1 {
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
 .plan:nth-child(2) {
     background-color: black;
     color: white;
-}
-
-.plan:nth-child(2) button {
-    background-color: white;
-    color: black;
 }
 
 .plan:hover {
@@ -228,30 +237,21 @@ a.transparent_link img {
     transform: translate(-10px, 10px);
 }
 
-.plan-avanzado h3 {
-    color: white;
-    margin: 0;
+.advanced-plan h3 {
     display: flex;
     justify-content: space-between;
-    align-content: center;
-}
-.popular {
-    padding: 5px;
-    font-size: 12px;
-}
-.plan-avanzado a {
-    text-decoration: none;
-    color: white;
+    align-items: center;
 }
 
-.plan button {
-    color: white;
-    background-color: black;
-    margin: 20px 0;
-    border: 0px;
+.advanced-plan h3 span {
+    padding: 10px;
+    font-size: 12px;
+    background: linear-gradient(to right, rgb(85, 158, 241), rgb(243, 183, 52)); /* Degradado de negro a rojo */
+    -webkit-background-clip: text; /* Aplicar el fondo solo al texto */
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    border: 1px rgba(255, 255, 255, 0.201) solid;
     border-radius: 10px;
-    height: 5vh;
-    width: 100%;
 }
 
 .plan ul {
@@ -291,30 +291,41 @@ a.transparent_link img {
 /* ------------------------------------------------------------------------------ */
 
 .quienes_somos {
-    width: 60%;
-    margin: auto auto 100px auto;
+    width: 70%;
+    margin: 30px auto;
     display: flex;
     flex-direction: column;
     align-items: start;
 }
 
-.quienes_somos .parrafo_der h3,
-.quienes_somos .parrafo_izq h3 {
-    font-size: 24px;
-    color: black;
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    width: 90%;
 }
 
-.quienes_somos .parrafo_der h3 {
-    align-self: end;
+.block {
+    flex: 1;
+    margin: 15px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    transition: all 0.3s ease;
 }
 
-.parrafo_izq {
-    align-self: start;
+.block:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 1);
+    transform: translate(-10px, 10px);
 }
 
-.parrafo_der {
-    align-self: end;
-    text-align: right;
+.row.left > img {
+    margin-right: 80px;
+}
+
+.row.right > img {
+    margin-left: 80px;
 }
 
 /* ------------------------------------------------------------------------------ */
@@ -322,7 +333,6 @@ a.transparent_link img {
 /* ------------------------------------------------------------------------------ */
 
 footer {
-    background-color: black;
     color: #ccc;
     display: flex;
     justify-content: space-around;
@@ -367,7 +377,9 @@ footer div ul li a img {
     display: inline-block;
     padding-right: 10px;
 }
-.containerflip{
+
+/* Cards */
+.containerflip {
     display: flex;
     /* propiedades para alinear las cartas mejor */
     flex-wrap: wrap;
@@ -381,14 +393,16 @@ footer div ul li a img {
     background-attachment: fixed;
     background-size: 100% 100%;
 }
-.card{
+
+.card {
     position: relative;
     width: 300px;
     height: 350px;
     /* Aplicar margenes con resto de cartas */
     margin: 20px;
 }
-.card .face{
+
+.card .face {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -397,18 +411,21 @@ footer div ul li a img {
     overflow: hidden;
     transition: 0.5s;
 }
-.card .front{
+
+.card .front {
     transform: perspective(600px) rotateY(0deg);
     box-shadow: 0px 5px 10px black;
 }
-.card .front img{
+
+.card .front img {
     position: absolute;
     width: 100%;
     height: 100%;
     /* indica como el contenido de un elemento deberá ser redimensionado para ajustarse a su contenedor */
     object-fit: cover;
 }
-.card .front h3{
+
+.card .front h3 {
     position: absolute;
     bottom: 0px;
     width: 100%;
@@ -418,7 +435,8 @@ footer div ul li a img {
     background: rgb(0, 0, 0,0.4);
     text-align: center;
 }
-.card .back{
+
+.card .back {
     transform: perspective(600px) rotateY(180deg);
     background: #1AA0F2;
     padding: 15px;
@@ -429,32 +447,31 @@ footer div ul li a img {
     text-align: center;
     box-shadow: 0px 5px 10px black;
 }
-.card .back .link{
+
+.card_link {
     border-top: 1px solid white;
     height: 50px;
     line-height: 50px;
 }
 
-.card .back .link a{
+.card_link a {
     color: white;
 }
 
-.card .back h3{
+.card .back h3 {
     font-size: 30px;
     margin-top: 20px;
     letter-spacing: 2px;
 }
-.card .back p{
+
+.card .back p {
     letter-spacing: 1px;
 }
-.card:hover .front{
+
+.card:hover .front {
     transform: perspective(600px)rotateY(180deg);
 }
-.card:hover .back{
-    transform: perspective(600px)rotateY(360deg);
-}
 
-h1{
-    text-align: center;
-    font-size: 40px;
+.card:hover .back {
+    transform: perspective(600px)rotateY(360deg);
 }
