@@ -3,8 +3,8 @@
 }
 
 body{
-    margin: 0;
-    background: url(img/fondo.jpeg);
+    margin: 10% 0 0 0;
+    background: url(../img/hero/heroImg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -18,7 +18,7 @@ body{
     background: white;
     margin-top: 100px;
     border: 2px solid #ccc;
-    border-radius: 10px; 
+    border-radius: 10%; 
     padding: 20px; 
    
 }
@@ -50,7 +50,7 @@ input[type="text"], input[type="password"] {
     font-size: 20px;
     color: white;
     background-color: #1AA0F2;
-    padding: 15px 140px;
+    padding: 10px 137px;
     border-radius: 5px;
     cursor: pointer;
     font-weight: 600px;
@@ -97,8 +97,8 @@ input[type="text"], input[type="password"] {
     font-size: 20px;
     color: white;
     background-color: black;
-    padding: 15px 156px;
-    border-radius: 5px;
+    padding: 10px 149px;
+    border-radius: 10px;
     cursor: pointer;
     font-family: "Poppins", sans-serif;
 }
