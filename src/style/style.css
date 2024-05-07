@@ -1,17 +1,25 @@
-/* ------------------------------------------------------------------------------ */
-/* Reset */
-/* ------------------------------------------------------------------------------ */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Poppins, sans-serif;
 }
 
 body {
-    background-color: #eff3f4;
+    background-color: #f6f6f6;
 }
+
+h1,h2,h3,h4,h5{
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+p, a, ul, ol{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
 
 /* ------------------------------------------------------------------------------ */
 /* Header */
@@ -37,7 +45,7 @@ nav ul {
 
 nav ul li {
     padding: 5px;
-    margin: 0 20px;
+    margin: 0 30px;
     display: inline;
     margin-left: 20px;
 }
@@ -66,10 +74,29 @@ nav ul li a p:hover::after {
 }
 
 .logo {
-    width: 50px;
+    width: 70px;
     height: auto;
-    margin-right: 20px;
+    margin-right: 30px;
 }
+
+header {
+    background-color: transparent;
+}
+
+header p{
+    color: #f6f6f6;
+}
+
+/* SLIDER HEADER */
+
+.bg_white {
+    background-color: #f6f6f6; /* !important para asegurar la prioridad */
+}
+.text_black p {
+    color: #222; /* !important para asegurar la prioridad */
+}
+
+
 
 /* Generales */
 
@@ -82,7 +109,7 @@ nav ul li a p:hover::after {
     text-align: center;
 }
 
-.mod_button_white a {
+.mod_button.white a {
     text-decoration: none;
 }
 
@@ -91,7 +118,7 @@ nav ul li a p:hover::after {
     background-color: #1AA0F2;
     padding: 10px;
 
-    a {
+    a{
         transition: ease 0.5s;
         color: white;
     }
@@ -121,14 +148,6 @@ nav ul li a p:hover::after {
     color: white;
 }
 
-.col_white a{
-    color: white;
-}
-
-.bg_white {
-    background-color: white;
-}
-
 .col_black {
     color: black;
 }
@@ -141,7 +160,7 @@ nav ul li a p:hover::after {
     color: #1AA0F2;
 }
 
-.bg_transparent {
+.bg_transparent{
     background-color: rgba(255,255,255,0.3);
 }
 
@@ -186,7 +205,7 @@ button {
 }
 
 .wallpaper div h1 {
-    font-size: 40px;
+    font-size: 4em;
     line-height: 70px;
     margin-bottom: 10px;
 }
@@ -251,6 +270,7 @@ button {
     padding: 10px;
     font-size: 12px;
     background: linear-gradient(to right, rgb(85, 158, 241), rgb(243, 183, 52)); /* Degradado de negro a rojo */
+    background-clip: text;
     -webkit-background-clip: text; /* Aplicar el fondo solo al texto */
     -webkit-text-fill-color: transparent;
     text-decoration: none;
@@ -389,7 +409,7 @@ footer div ul li a img {
     flex-wrap: wrap;
     /* align-items: center; */
     justify-content: center;
-    min-height: 70vh;
+    min-height: 50vh;
     /* background-color: #f1f1f1;  */
     background-image: url(img/fondo.jpg);
     background-position: center;
