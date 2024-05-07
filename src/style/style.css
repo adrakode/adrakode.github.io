@@ -404,7 +404,19 @@ button {
 }
 
 .accordion-header h4 {
+    margin-left: 25px;
     display: inline; /* Para que no ocupe todo el ancho */
+}
+
+.accordion-header .icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    width: 20px; /* Ancho del icono */
+    height: 20px; /* Altura del icono */
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .accordion-header .arrow {
