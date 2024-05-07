@@ -97,8 +97,6 @@ header p{
     color: #222; /* !important para asegurar la prioridad */
 }
 
-
-
 /* Generales */
 
 .mod_button {
@@ -106,7 +104,7 @@ header p{
     background-color: white;
     padding: 10px;
     margin: 10px 0;
-    transition: ease 0.5s;
+    transition: background-color 0.5s, color 0.5s; /* Consolidar transiciones */
     text-align: center;
 }
 
@@ -115,27 +113,20 @@ header p{
     color: black;
 }
 
-.mod_button:hover {
-    border-radius: 10px;
+.mod_button:hover, .mod_button.black:hover {
     background-color: #1AA0F2;
-    padding: 10px;
+}
 
-    a {
-        transition: ease 0.5s;
-        color: white;
-    }
+.mod_button:hover a, .mod_button.black:hover a {
+    color: white;
 }
 
 .mod_button.black {
     background-color: black;
-}
 
-.mod_button.black a {
-    color: white;
-}
-
-.mod_button.black:hover {
-    background-color: #1AA0F2;
+    a {
+        color: white;
+    }
 }
 
 .col_white{
@@ -177,30 +168,26 @@ button {
     position: relative;
     display: block;
     width: 100%;
-    height: auto;
-}
-
-.wallpaper > img {
-    display: block;
-    margin: auto;
-    margin-bottom: 10px;
-    width: 100%;
-    height: auto;
-    z-index: 1;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url( '../img/juegos/heroImg.png' );
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .wallpaper > div {
     width: 33%;
     position: absolute;
-    top: 40%;
-    left: 30%;
+    top: 45%;
+    left: 35%;
     transform: translate(-50%, -50%);
     z-index: 2;
 }
 
 .wallpaper div h1 {
-    font-size: 4em;
-    line-height: 70px;
+    font-size: 6vh;
+    line-height: 8vh;
     margin-bottom: 10px;
 }
 
@@ -284,6 +271,7 @@ button {
     padding: 10px 0;
 }
 
+/* Media queries */
 @media screen and (max-width: 768px) {
     .planes {
         flex-direction: column;
@@ -292,6 +280,14 @@ button {
     .plan {
         width: 300px;
         margin-bottom: 20px;
+    }
+
+    #header, .wallpaper_description, .row > img {
+        display: none;
+    }
+
+    .wallpaper > div {
+        width: 50%;
     }
 }
 
