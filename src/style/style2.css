@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Poppins, sans-serif;
 }
 
 body {
@@ -117,7 +117,11 @@ nav ul li a p:hover::after {
     padding: 10px;
 }
 
-.col_white {
+.col_white{
+    color: white;
+}
+
+.col_white a{
     color: white;
 }
 
@@ -138,7 +142,7 @@ nav ul li a p:hover::after {
 }
 
 .bg_transparent {
-    background-color: transparent;
+    background-color: rgba(255,255,255,0.3);
 }
 
 button {
