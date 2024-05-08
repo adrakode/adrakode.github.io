@@ -51,7 +51,7 @@ nav ul {
 
 nav ul li {
     padding: 5px;
-    margin: 0 30px;
+    margin: 0 20px;
     display: inline;
     margin-left: 20px;
 }
@@ -83,7 +83,7 @@ nav ul li a p:hover::after {
 #logo {
     width: 70px;
     height: auto;
-    margin-right: 30px;
+    margin-right: 40px;
 }
 #nav_button{
     border-radius: 10px;
@@ -330,6 +330,9 @@ button {
 /* ------------------------------------------------------------------------------ */
 /* Quiénes somos */
 /* ------------------------------------------------------------------------------ */
+.accordion{
+    margin: 30px;
+}
 
 .accordion p{
     padding: 10px 0 30px 0;
@@ -402,15 +405,15 @@ button {
 }
 
 .content-box {
-    width: 70%; /* Ancho general para todas las secciones */
-    margin: 30px auto; /* Margen superior e inferior de 30px, y centrado horizontal */
-    padding: 20px; /* Añadimos un poco de espacio interno para separar el contenido del borde */
+    width: 70%; 
+    margin: 30px auto; 
+    padding: 20px; 
     /* background-color: red;  */
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /* Sombra ligera para un efecto tridimensional */
-    transition: all 0.3s ease; /* Transición suave para cualquier cambio */
-    display: flex; /* Para que los elementos dentro se alineen horizontalmente */
-    flex-direction: column; /* Establecemos la dirección de los elementos hijos como columnas */
-    align-items: center; /* Centramos los elementos hijos horizontalmente */
+    /* box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);  */
+    transition: all 0.3s ease;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
 }
 
 /* ------------------------------------------------------------------------------ */
@@ -478,7 +481,7 @@ footer div ul li a img {
 
 .card {
     position: relative;
-    width: 300px;
+    width: 270px;
     height: 350px;
     /* Aplicar margenes con resto de cartas */
     margin: 20px;
@@ -542,7 +545,6 @@ footer div ul li a img {
 
 .card .back h3 {
     font-size: 30px;
-    margin-top: 20px;
     letter-spacing: 2px;
 }
 
