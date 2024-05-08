@@ -33,11 +33,14 @@ a{
 header {
     padding: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0; /* Asegura que el header esté pegado al borde izquierdo */
+    right: 0; /* Asegura que el header esté pegado al borde derecho */
+    margin: 0 auto; /* Centra el header horizontalmente en el viewport */
+    width: 75%;
     z-index: 1000;
     transition: background-color 0.5s ease;
     background-color: transparent;
@@ -182,7 +185,7 @@ button {
 }
 
 .content-box {
-    width: 70%; 
+    width: 75%; 
     margin: 30px auto; 
     padding: 20px; 
     /* background-color: red;  */
