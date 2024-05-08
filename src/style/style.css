@@ -116,7 +116,6 @@ nav ul li a p:hover::after {
 /* GENERALES */
 /* ------------------------------------------------------------------------------ */
 
-
 .mod_button {
     border-radius: 10px;
     background-color: white;
@@ -380,8 +379,7 @@ button {
 /* ------------------------------------------------------------------------------ */
 
 .accordion {
-    width: 80%;
-    margin: 30px auto;
+
 }
 .accordion p{
     padding: 10px 0 30px 0;
@@ -427,7 +425,7 @@ button {
     transform: translateY(-50%); /* Inicialmente, la flecha apunta hacia abajo */  
     width: 10px;
     height: 10px;
-    background-image: url('../icon/arrowhead.png');
+    background-image: url('/src/icon/arrowhead.png');
     background-size: contain;
     background-repeat: no-repeat;
     transition: transform 0.3s ease;
@@ -451,6 +449,37 @@ button {
 
 .accordion-item.active .accordion-content {
     max-height: 500px; /* Establece una altura máxima */
+}
+
+.content-box {
+    width: 70%; /* Ancho general para todas las secciones */
+    margin: 30px auto; /* Margen superior e inferior de 30px, y centrado horizontal */
+    padding: 20px; /* Añadimos un poco de espacio interno para separar el contenido del borde */
+    /* background-color: red;  */
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /* Sombra ligera para un efecto tridimensional */
+    transition: all 0.3s ease; /* Transición suave para cualquier cambio */
+    display: flex; /* Para que los elementos dentro se alineen horizontalmente */
+    flex-direction: column; /* Establecemos la dirección de los elementos hijos como columnas */
+    align-items: center; /* Centramos los elementos hijos horizontalmente */
+}
+
+.planes, .personajes, .quienes_somos {
+    /* Eliminamos los estilos específicos */
+}
+
+/* Acordeon */
+.accordion {
+    /* Eliminamos los estilos específicos */
+}
+
+/* Quiénes somos */
+.quienes_somos {
+    /* Eliminamos los estilos específicos */
+}
+
+/* Personajes */
+.personajes {
+    /* Eliminamos los estilos específicos */
 }
 
 /* ------------------------------------------------------------------------------ */
@@ -606,3 +635,4 @@ footer div ul li a img {
     margin: 30px;
     transition: 2.5s ease;
 }
+
