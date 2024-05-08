@@ -9,7 +9,7 @@ window.addEventListener( 'scroll', function() {
     let logo = document.getElementById( 'logo' ); 
 
     // Definimos la altura del usuario máximo antes del cambio de color
-    let max_cap = 150;
+    let max_cap = 100;
 
     if( this.window.scrollY > 500 )
         floating_arrow.style.display = 'block';

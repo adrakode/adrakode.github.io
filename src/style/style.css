@@ -426,7 +426,7 @@ button {
     transform: translateY(-50%); /* Inicialmente, la flecha apunta hacia abajo */  
     width: 10px;
     height: 10px;
-    background-image: url('/src/icon/arrowhead.png');
+    background-image: url('../icon/arrowhead.png');
     background-size: contain;
     background-repeat: no-repeat;
     transition: transform 0.3s ease;
