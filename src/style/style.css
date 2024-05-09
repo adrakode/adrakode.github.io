@@ -33,14 +33,11 @@ a{
 header {
     padding: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: fixed;
     top: 0;
-    left: 0; /* Asegura que el header esté pegado al borde izquierdo */
-    right: 0; /* Asegura que el header esté pegado al borde derecho */
-    margin: 0 auto; /* Centra el header horizontalmente en el viewport */
-    width: 75%;
+    width: 100%;
     z-index: 1000;
     transition: background-color 0.5s ease;
     background-color: transparent;
@@ -54,7 +51,7 @@ nav ul {
 
 nav ul li {
     padding: 5px;
-    margin: 0 20px;
+    margin: 0 30px;
     display: inline;
     margin-left: 20px;
 }
@@ -86,7 +83,7 @@ nav ul li a p:hover::after {
 #logo {
     width: 70px;
     height: auto;
-    margin-right: 40px;
+    margin-right: 30px;
 }
 #nav_button{
     border-radius: 10px;
@@ -184,125 +181,6 @@ button {
     line-height: 30px;
 }
 
-.content-box {
-    width: 75%; 
-    margin: 30px auto; 
-    padding: 20px; 
-    /* background-color: red;  */
-    /* box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);  */
-    transition: all 0.3s ease;
-    display: flex; 
-    flex-direction: column; 
-    align-items: center;
-}
-
-
-/* ------------------------------------------------------------------------------ */
-/* TARJETAS */
-/* ------------------------------------------------------------------------------ */
-
-.containerflip {
-    display: flex;
-    /* propiedades para alinear las cartas mejor */
-    flex-wrap: wrap;
-    /* align-items: center; */
-    justify-content: center;
-    min-height: 50vh;
-}
-
-.card {
-    position: relative;
-    width: 270px;
-    height: 350px;
-    /* Aplicar margenes con resto de cartas */
-    margin: 20px;
-}
-
-.card .face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: 0.5s;
-}
-
-.card .front {
-    transform: perspective(600px) rotateY(0deg);
-    box-shadow: 0px 5px 10px black;
-}
-
-.card .front img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    /* indica como el contenido de un elemento deberá ser redimensionado para ajustarse a su contenedor */
-    object-fit: cover;
-}
-
-.card .front h3 {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    height: 45px;
-    line-height: 45px;
-    color: white;
-    background: rgb(0, 0, 0,0.4);
-    text-align: center;
-}
-
-.card .back {
-    transform: perspective(600px) rotateY(180deg);
-    background: #1AA0F2;
-    padding: 15px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    box-shadow: 0px 5px 10px black;
-}
-
-.card_link {
-    border-top: 1px solid white;
-    height: 50px;
-    line-height: 50px;
-}
-
-.card_link a {
-    color: white;
-}
-
-.card .back h3 {
-    font-size: 30px;
-    letter-spacing: 2px;
-}
-
-.card .back p {
-    letter-spacing: 1px;
-}
-
-.card:hover .front {
-    transform: perspective(600px)rotateY(180deg);
-}
-
-.card:hover .back {
-    transform: perspective(600px)rotateY(360deg);
-}
-
-/* Flecha flotante */
-#floating_arrow {
-    display: none;
-    width: 30px;
-    height: 30px;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin: 30px;
-    transition: 2.5s ease;
-}
-
 
 /* ------------------------------------------------------------------------------ */
 /* HERO */
@@ -358,6 +236,7 @@ button {
 
 .planes {
     height: fit-content;
+    width: 70%;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
@@ -441,16 +320,106 @@ button {
     .wallpaper > div {
         width: 50%;
     }
+    #toggle-btn{
+        border: 0px;
+        background-color: transparent;
+        width: 30px;
+        position: fixed;
+        z-index: 200000;
+        margin: 10px;
+        top: 100;
+        left: 100;
+    }
+   
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a p {
+        display: block;
+    }
+    #black {
+        display: none;
+        min-height: 100vh;
+        background-color: black;
+        z-index: 200;
+    }
+    
+    .overflow-hidden {
+        overflow-y: hidden;
+    }
 }
 
+@media screen and (min-width: 768px) {
+    nav ul li {
+        display: inline;
+    }
+
+    nav ul li a p {
+        display: inline-block;
+    }
+}
+
+/* ------------------------------------------------------------------------------ */
+/* Personajes */
+/* ------------------------------------------------------------------------------ */
+
+.personajes {
+    margin-top: 100px;
+    min-height: 70vh;
+}
 
 /* ------------------------------------------------------------------------------ */
 /* Quiénes somos */
 /* ------------------------------------------------------------------------------ */
-.accordion{
-    margin: 30px;
+
+.quienes_somos {
+    width: 70%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    width: 90%;
+}
+
+.block {
+    flex: 1;
+    margin: 15px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.block:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 1);
+    transform: translate(-10px, 10px);
+}
+
+.row.left > img {
+    margin-right: 80px;
+}
+
+.row.right > img {
+    margin-left: 80px;
+}
+
+
+/* ------------------------------------------------------------------------------ */
+/* Acordeon */
+/* ------------------------------------------------------------------------------ */
+
+.accordion {
+    width: 80%;
+    margin: 20px auto;
+}
 .accordion p{
     padding: 10px 0 30px 0;
 }
@@ -495,7 +464,7 @@ button {
     transform: translateY(-50%); /* Inicialmente, la flecha apunta hacia abajo */  
     width: 10px;
     height: 10px;
-    background-image: url('/src/icon/arrowhead.png');
+    background-image: url('../icon/arrowhead.png');
     background-size: contain;
     background-repeat: no-repeat;
     transition: transform 0.3s ease;
@@ -520,7 +489,6 @@ button {
 .accordion-item.active .accordion-content {
     max-height: 500px; /* Establece una altura máxima */
 }
-
 
 /* ------------------------------------------------------------------------------ */
 /* Footer */
@@ -570,5 +538,109 @@ footer div ul li a img {
 .rrss ul li {
     display: inline-block;
     padding-right: 10px;
+}
+
+/* Cards */
+.containerflip {
+    display: flex;
+    /* propiedades para alinear las cartas mejor */
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: center;
+    min-height: 50vh;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    /* Aplicar margenes con resto de cartas */
+    margin: 20px;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0px 5px 10px black;
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* indica como el contenido de un elemento deberá ser redimensionado para ajustarse a su contenedor */
+    object-fit: cover;
+}
+
+.card .front h3 {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    background: rgb(0, 0, 0,0.4);
+    text-align: center;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: #1AA0F2;
+    padding: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0px 5px 10px black;
+}
+
+.card_link {
+    border-top: 1px solid white;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card_link a {
+    color: white;
+}
+
+.card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card .back p {
+    letter-spacing: 1px;
+}
+
+.card:hover .front {
+    transform: perspective(600px)rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px)rotateY(360deg);
+}
+
+/* Flecha flotante */
+#floating_arrow {
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 30px;
+    transition: 2.5s ease;
 }
 

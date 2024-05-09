@@ -39,3 +39,21 @@ accordionItems.forEach(item => {
         arrow.classList.toggle('active');
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    var toggleBtn = document.getElementById("toggle-btn");
+    var header = document.getElementById("header");
+    var div_black = document.getElementById( 'black' );
+
+    toggleBtn.addEventListener("click", function() {
+        if (header.style.display === "none") {
+            header.style.display = "block";
+            div_black.style.display = 'block';
+            
+            document.body.classList.add( 'overflow-hidden' );
+        } else {
+            header.style.display = "none";
+            div_black.style.display = 'none';
+            document.body.classList.remove( 'overflow-hidden' );
+        }
+    });
+});
