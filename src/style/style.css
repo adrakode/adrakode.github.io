@@ -320,7 +320,9 @@ button {
     .wallpaper > div {
         width: 50%;
     }
+
     #toggle-btn{
+        display: block;
         border: 0px;
         background-color: transparent;
         width: 30px;
@@ -644,3 +646,6 @@ footer div ul li a img {
     transition: 2.5s ease;
 }
 
+#toggle-button {
+    display: none;
+}
