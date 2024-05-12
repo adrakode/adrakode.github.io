@@ -31,7 +31,8 @@ a{
 /* ------------------------------------------------------------------------------ */
 
 header {
-    padding: 10px;
+    margin: 0;
+    padding: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -351,10 +352,12 @@ button {
 }
 
 @media screen and (min-width: 768px) {
+    button#toggle-btn{
+        display: none;
+    }
     nav ul li {
         display: inline;
     }
-
     nav ul li a p {
         display: inline-block;
     }

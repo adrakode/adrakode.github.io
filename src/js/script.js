@@ -57,3 +57,10 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+
+window.addEventListener('resize', function() {
+    // Recargar la página
+    window.location.reload();
+});
+
