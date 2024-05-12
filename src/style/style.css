@@ -314,13 +314,12 @@ button {
         margin-bottom: 20px;
     }
 
-    #header, .wallpaper_description, .row > img {
-        display: none;
-    }
-
     .wallpaper > div {
         width: 50%;
     }
+}
+
+@media screen and (max-width: 1024px) {
     #toggle-btn{
         border: 0px;
         background-color: transparent;
@@ -346,12 +345,17 @@ button {
         z-index: 200;
     }
     
+    #header, .wallpaper_description, .row > img {
+        display: none;
+    }
+
     .overflow-hidden {
         overflow-y: hidden;
     }
+    
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1025px) {
     button#toggle-btn{
         display: none;
     }
