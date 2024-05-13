@@ -43,13 +43,7 @@ header {
     transition: background-color 0.5s ease;
     background-color: transparent;
 }
-nav {
-    display: none;
-}
 
-nav.show {
-    display: block;
-}
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -116,6 +110,7 @@ nav ul li a p:hover::after {
 .btn_black{
     background-color: #222 !important;
 }
+
 
 
 
@@ -364,6 +359,13 @@ button {
 @media screen and (min-width: 1025px) {
     button#toggle-btn{
         display: none;
+    }
+    /* nav {
+        display: none;
+    } */
+    
+    nav.show {
+        display: block;
     }
     nav ul li {
         display: inline;

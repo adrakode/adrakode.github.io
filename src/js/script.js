@@ -71,6 +71,10 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     
 });
+// document.getElementById("close-btn").addEventListener("click", function() {
+//     // Ocultar el menú, puedes hacerlo cambiando clases o directamente modificando el estilo
+//     document.getElementById("header").classList.remove("show-menu");
+// });
 
 
 window.addEventListener('resize', function() {
