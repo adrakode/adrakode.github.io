@@ -43,7 +43,13 @@ header {
     transition: background-color 0.5s ease;
     background-color: transparent;
 }
+nav {
+    display: none;
+}
 
+nav.show {
+    display: block;
+}
 nav ul {
     list-style-type: none;
     margin: 0;
