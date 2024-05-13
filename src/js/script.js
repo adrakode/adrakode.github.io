@@ -43,6 +43,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var toggleBtn = document.getElementById("toggle-btn");
     var header = document.getElementById("header");
     var div_black = document.getElementById( 'black' );
+    const toggleButton = document.getElementById('toggle-btn');
+    const navBar = document.querySelector('nav');
 
     toggleBtn.addEventListener("click", function() {
         if (header.style.display === "none") {
@@ -55,5 +57,28 @@ document.addEventListener("DOMContentLoaded", function() {
             div_black.style.display = 'none';
             document.body.classList.remove( 'overflow-hidden' );
         }
+        toggleButton.addEventListener('click', function() {
+            navBar.classList.toggle('show');
+        });
+    
+        // Cerrar el menú al hacer clic en un enlace
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navBar.classList.remove('show');
+            });
+        });
     });
+    
 });
+// document.getElementById("close-btn").addEventListener("click", function() {
+//     // Ocultar el menú, puedes hacerlo cambiando clases o directamente modificando el estilo
+//     document.getElementById("header").classList.remove("show-menu");
+// });
+
+
+window.addEventListener('resize', function() {
+    // Recargar la página
+    window.location.reload();
+});
+

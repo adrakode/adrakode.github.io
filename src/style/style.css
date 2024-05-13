@@ -31,7 +31,8 @@ a{
 /* ------------------------------------------------------------------------------ */
 
 header {
-    padding: 10px;
+    margin: 0;
+    padding: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,6 +110,7 @@ nav ul li a p:hover::after {
 .btn_black{
     background-color: #222 !important;
 }
+
 
 
 
@@ -304,6 +306,19 @@ button {
 
 /* Media queries */
 @media screen and (max-width: 768px) {
+
+    #toggle-btn{
+        display: block;
+        border: 0px;
+        background-color: transparent;
+        width: 30px;
+        position: fixed;
+        z-index: 200000;
+        margin: 10px;
+        top: 100;
+        left: 100;
+    }
+    
     .planes {
         flex-direction: column;
         align-items: center;
@@ -313,13 +328,12 @@ button {
         margin-bottom: 20px;
     }
 
-    #header, .wallpaper_description, .row > img {
-        display: none;
-    }
-
     .wallpaper > div {
         width: 50%;
     }
+}
+
+@media screen and (max-width: 1024px) {
 
     #toggle-btn{
         display: block;
@@ -347,16 +361,30 @@ button {
         z-index: 200;
     }
     
+    #header, .wallpaper_description, .row > img {
+        display: none;
+    }
+
     .overflow-hidden {
         overflow-y: hidden;
     }
+    
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1025px) {
+    button#toggle-btn{
+        display: none;
+    }
+    /* nav {
+        display: none;
+    } */
+    
+    nav.show {
+        display: block;
+    }
     nav ul li {
         display: inline;
     }
-
     nav ul li a p {
         display: inline-block;
     }
@@ -647,5 +675,5 @@ footer div ul li a img {
 }
 
 #toggle-btn {
-    display: none;
+    display: block;
 }
