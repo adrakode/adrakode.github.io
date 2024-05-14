@@ -452,9 +452,10 @@ button {
 
 .accordion-header .arrow {
     position: absolute;
-    top: 50%;
+    top: calc(50% - 5px); /* Ajuste para centrar verticalmente */
     right: 15px;
-    transform: translateY(-50%); /* Inicialmente, la flecha apunta hacia abajo */  
+    transform: rotate(0deg);
+    transform-origin: center; /* Establece el punto de origen en el centro */
     width: 10px;
     height: 10px;
     background-image: url('/src/icon/arrowhead.png');
@@ -464,7 +465,7 @@ button {
 }
 
 .accordion-header.active .arrow {
-    transform: translateY(-50%) rotate(180deg);
+    transform: rotate(180deg); /* Rotación para que apunte hacia arriba cuando está activo */
 }
 
 .accordion-header:hover {
