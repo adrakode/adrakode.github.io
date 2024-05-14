@@ -1,7 +1,3 @@
-///////////////////////////////////
-// FUNCIONALIDAD SCROLL HEADER
-///////////////////////////////////
-
 // Añadimos un listener para detectar el scroll del usuario
 window.addEventListener('scroll', function() {
     
