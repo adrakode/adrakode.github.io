@@ -313,6 +313,10 @@ button {
     box-shadow: 0px 5px 10px black;
 }
 
+.card .back p{
+    margin-bottom: 15px;
+}
+
 .card_link {
     border-top: 1px solid white;
     height: 50px;
@@ -325,12 +329,7 @@ button {
 
 .card .back h3 {
     font-size: 30px;
-    margin-top: 20px;
     letter-spacing: 2px;
-}
-
-.card .back p {
-    letter-spacing: 1px;
 }
 
 .card:hover .front {
