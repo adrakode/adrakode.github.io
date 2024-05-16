@@ -1,136 +1,217 @@
+
 *{
     box-sizing: border-box;
 }
+#header{
+    height: 20px;
+}
+
+    
 
 body{
-    margin: 10% 0 0 0;
-    background: url(../img/hero/heroImg.png);
+    margin: 3% 0 0 0;
+    /* background: url(../img/hero/heroImg.png); */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: "Poppins", sans-serif;
 }
-
-.contenedor{
+.contenedor {
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
     width: 100%;
-    padding: 15px;
-    border-radius: 20px;
+    /*padding: 15px;
+    border-radius: 20px; */
 }
-.formulario{
-    background: white;
-    margin-top: 100px;
-    border: 2px solid #ccc;
-    border-radius: 10px; 
-    padding: 20px; 
+.inicioRapido{
+    
+    text-align: left;
+    font-size: 15px;
+    width: 100%;
+    /* padding: 10px; */
+    border: none;
+    font-family: "Poppins", sans-serif;
+    margin-left: 400px;
+    margin-top: -359px;
+    
+    
+}
+.inicioRapido div{
+    padding-bottom: 30px;
+    width: 100%;
    
 }
+.contenedor > .input-contenedor {
+    margin-bottom: 15px;
+    margin-left: -100px;
+    width: 100%;
+    
+}
+
+.campo{
+    margin-bottom: 15px;
+}
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Poppins", sans-serif;
+}
+.campo input[type="text"],
+.campo input[type="password"] {
+    text-align: left;
+    font-size: 15px;
+    width: 50%;
+    padding: 10px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+}
 h1{
-    padding-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 30px;
     text-align: center;
     color: #222;
-    font-size: 40px;
-    font-weight: 800;
+    font-size: 30px;
     font-style: normal;
     font-family: "Poppins", sans-serif;
 }
 input[type="text"], input[type="password"] {
     text-align: left;
-    font-size: 20px;
-    width: 80%;
+    font-size: 15px;
+    width: 50%;
     padding: 10px;
     border: none;
     font-family: "Poppins", sans-serif;
 }
 
-.input-contenedor {
+/* .input-contenedor {
     margin-bottom: 15px;
-    border: 1px solid #aaa;
-}
-.boton{
+} */
+.boton {
+    width: 50%;
     border: none;
-    width: 100%;
-    font-size: 20px;
-    color: white;
+    font-size: 15px;
     background-color: #1AA0F2;
-    padding: 10px 137px;
+    padding: 15px 20px; /* Ajuste de espaciado */
     border-radius: 10px;
     cursor: pointer;
-    font-weight: 600px;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
-  
+    text-align: center; /* Centrar el texto dentro del botón */
+    margin-left: -350px;
+    margin-bottom: 15px;
+    color: #FFFFFF; /* Cambia el color del enlace */
+    z-index: 2;
+
 }
-.inicio{
-    position: relative;
-    left: 15px;
-}
-.separator {
-    /* border-top: 1px solid black; Estilo de la línea */
-    margin: 20px 0; /* Espacio vertical */
-    position: relative; /* Añadido para el posicionamiento relativo */
+.boton input[type="submit"] {
+    border: none; 
+    outline: none; 
+    background: none;  
+    color: white;   
 }
 
-.separator::before,
-.separator::after {
-    content: "";
-    position: absolute;
-    height: 1px; /* Altura de la línea */
-    background-color: black; /* Color de la línea */
-    top: 50%; /* Posición verticalmente centrada */
+.separator1 {
+    width: 1px; 
+    height: 130px;
+    background-color: #646262; 
+    opacity: 0.5;
+    align-items: center;
+    margin-top: -300px;
 }
-
-.separator::before {
-    width: 180px; /* Longitud de la línea antes de la letra */
-    left: 0px; /* Posiciona la línea antes de la letra */
+.separator2 {
+    width: 1px; 
+    height: 130px;
+    background-color: #646262; 
+    opacity: 0.5;
+    align-items: center;
+    margin-bottom: 100px;
 }
-
-.separator::after {
-    width: 180px; /* Longitud de la línea después de la letra */
-    right: 0px; /* Posiciona la línea después de la letra */
+.separator1-registro {
+    width: 1px; 
+    height: 200px;
+    background-color: #646262; 
+    opacity: 0.5;
+    align-items: center;
+    margin-bottom: 410px;
+}
+.separator2-registro {
+    width: 1px; 
+    height: 200px;
+    background-color: #646262; 
+    opacity: 0.5;
+    align-items: center;
+    margin-bottom: 100px;
 }
 .o{
-    position: relative;
-    right:-50%;
-    top: -50%;
+    color: #646262;
+    opacity: 0.5;
 }
-.boton2{
-    border: none;   
-    width: 100%;
-    font-size: 20px;
-    color: white;
-    background-color: black;
-    padding: 10px 149px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-family: "Poppins", sans-serif;
-}
+
 .boton:hover{
-    background-color: #1AA0F2;
+    background-color: #050505;
 }
 p{
     text-align: center;
     font-family: "Poppins", sans-serif;
 }
 .textoaceptar{
+    margin-top: -19px;
+    text-align: center;
     font-family: "Poppins", sans-serif;
 }
-#verificacion{
-    font-family: "Poppins", sans-serif;
-    margin-top: 20px;
+.contenedor-verificacion{
+    padding-top: 100px;
+}
+.contenedor-verificacion-registro{
+    padding-top: 160px;
 }
 .link{
     text-decoration: none;
     color: #1a2537;
-    font-weight: 600px;
+    font-weight: 600px
 }
 .link:hover{
     color: #1AA0F2;
 }
-@media(min-width: 768px){
+.logo{
+    padding-top: 20px;
+    text-align: center;
+}
+.flechaAtras{
+    padding-top: 20px;
+    padding-right: 1300px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+.atrás{
+    padding-left: 5px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    color: #050505;
+}
+@media (min-width: 843px){
     .formulario{
-        width: 500px;
+        width: 40%;
         margin-top: 150px;
         margin: auto;
         border-radius: 2%;
     }
+    .boton{
+        margin-right: 8%;
+    }
 }
+@media (max-width: 842px) {
+    .formulario{
+        width: 60%;
+        margin-top: 150px;
+        margin: auto;
+        border-radius: 2%;
+    }
+    .formulario > .boton{
+        margin-left: ;
+        width: 100%;
+    }
+}
+
