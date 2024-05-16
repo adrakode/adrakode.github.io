@@ -1,123 +1,129 @@
-
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-#header{
-    height: 20px;
-}
-
-    
-
-body{
-    margin: 3% 0 0 0;
-    /* background: url(../img/hero/heroImg.png); */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: "Poppins", sans-serif;
-}
-.contenedor {
+.contenedor-global {
     display: flex;
-    align-items: center; 
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.formulario {
+    display: flex;
+    /* flex-direction: row; Asegura que el contenido interno esté en columna */
+    /* border: 1px solid #ccc; Agrega un borde si es necesario */
+    width: 50%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 10px; /* Espaciado entre los dos contenedores */
+
+}
+
+.inicioRapido {
+    display: flex;
     flex-direction: column;
-    width: 100%;
-    /*padding: 15px;
-    border-radius: 20px; */
+    /* border: 1px solid #ccc; Agrega un borde si es necesario */
+    width: 50%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 10px; /* Espaciado entre los dos contenedores */
 }
-.inicioRapido{
-    
-    text-align: left;
-    font-size: 15px;
-    width: 100%;
-    /* padding: 10px; */
-    border: none;
-    font-family: "Poppins", sans-serif;
-    margin-left: 400px;
-    margin-top: -359px;
-    
-    
+.formulario .email {
+    margin-top: 10px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Add line break after each element */
+    flex-direction: column;
 }
-.inicioRapido div{
-    padding-bottom: 30px;
-    width: 100%;
-   
-}
-.contenedor > .input-contenedor {
-    margin-bottom: 15px;
-    margin-left: -100px;
-    width: 100%;
-    
+.formulario .password {
+    margin-top: 10px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Add line break after each element */
+    flex-direction: column;
 }
 
-.campo{
-    margin-bottom: 15px;
-}
-.campo label {
-    display: block;
-    margin-bottom: 5px;
-    font-family: "Poppins", sans-serif;
-}
-.campo input[type="text"],
-.campo input[type="password"] {
-    text-align: left;
-    font-size: 15px;
-    width: 50%;
-    padding: 10px;
-    border: none;
-    font-family: "Poppins", sans-serif;
-}
-h1{
-    padding-top: 10px;
-    padding-bottom: 30px;
-    text-align: center;
-    color: #222;
-    font-size: 30px;
-    font-style: normal;
-    font-family: "Poppins", sans-serif;
-}
-input[type="text"], input[type="password"] {
-    text-align: left;
-    font-size: 15px;
-    width: 50%;
-    padding: 10px;
-    border: none;
-    font-family: "Poppins", sans-serif;
+.boton{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    flex-direction: column;
 }
 
-/* .input-contenedor {
-    margin-bottom: 15px;
-} */
-.boton {
-    width: 50%;
+.boton #iniciar_sesion{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #1DA1F2;
     border: none;
-    font-size: 15px;
-    background-color: #1AA0F2;
-    padding: 15px 20px; /* Ajuste de espaciado */
-    border-radius: 10px;
-    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+}
+.boton #crear_cuenta{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #1DA1F2;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: black;
     text-decoration: none;
+}
+
+.contenedor-global .inicioRapido {
+    display: flex;
+    margin-top: 0;
+}
+
+.inicioRapido .pagina {
+    padding: 5px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+}
+.flechaAtras{
+    padding-top: 0px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+#logo{
+    width: 90px;
+    height: auto;
+    padding-right: 20px;
+    padding-top: 20px;
+    
+}
+.atras{
+    padding-left: 5px;
     font-family: "Poppins", sans-serif;
-    text-align: center; /* Centrar el texto dentro del botón */
-    margin-left: -350px;
-    margin-bottom: 15px;
-    color: #FFFFFF; /* Cambia el color del enlace */
-    z-index: 2;
-
+    font-size: 15px;
+    color: #050505;
+    
 }
-.boton input[type="submit"] {
-    border: none; 
-    outline: none; 
-    background: none;  
-    color: white;   
+.flechaAtras a{
+    text-decoration: none;
+    
 }
-
+.contenedor{
+    margin: 0 auto;
+}
 .separator1 {
     width: 1px; 
     height: 130px;
     background-color: #646262; 
     opacity: 0.5;
     align-items: center;
-    margin-top: -300px;
+    margin-left: 500px;
+    margin-bottom: 0px;
 }
 .separator2 {
     width: 1px; 
@@ -125,93 +131,14 @@ input[type="text"], input[type="password"] {
     background-color: #646262; 
     opacity: 0.5;
     align-items: center;
-    margin-bottom: 100px;
+    margin-left: 500px;
+    margin-bottom: 50px;
 }
-.separator1-registro {
-    width: 1px; 
-    height: 200px;
-    background-color: #646262; 
-    opacity: 0.5;
-    align-items: center;
-    margin-bottom: 410px;
-}
-.separator2-registro {
-    width: 1px; 
-    height: 200px;
-    background-color: #646262; 
-    opacity: 0.5;
-    align-items: center;
-    margin-bottom: 100px;
+.separadores{
+    margin-left: 100px;
 }
 .o{
     color: #646262;
     opacity: 0.5;
+    margin-left: 496px;
 }
-
-.boton:hover{
-    background-color: #050505;
-}
-p{
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-}
-.textoaceptar{
-    margin-top: -19px;
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-}
-.contenedor-verificacion{
-    padding-top: 100px;
-}
-.contenedor-verificacion-registro{
-    padding-top: 160px;
-}
-.link{
-    text-decoration: none;
-    color: #1a2537;
-    font-weight: 600px
-}
-.link:hover{
-    color: #1AA0F2;
-}
-.logo{
-    padding-top: 20px;
-    text-align: center;
-}
-.flechaAtras{
-    padding-top: 20px;
-    padding-right: 1300px;
-    text-align: left;
-    display: flex;
-    align-items: center;
-}
-.atrás{
-    padding-left: 5px;
-    font-family: "Poppins", sans-serif;
-    font-size: 15px;
-    color: #050505;
-}
-@media (min-width: 843px){
-    .formulario{
-        width: 40%;
-        margin-top: 150px;
-        margin: auto;
-        border-radius: 2%;
-    }
-    .boton{
-        margin-right: 8%;
-    }
-}
-@media (max-width: 842px) {
-    .formulario{
-        width: 60%;
-        margin-top: 150px;
-        margin: auto;
-        border-radius: 2%;
-    }
-    .formulario > .boton{
-        margin-left: ;
-        width: 100%;
-    }
-}
-
