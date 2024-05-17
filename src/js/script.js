@@ -2,14 +2,7 @@
 window.addEventListener('scroll', function() {
     
     // Capturamos los elementos a modificar
-    let header = document.getElementById('header');
-    let ul = document.getElementById('ul_navbar');
     let floating_arrow = document.getElementById('floating_arrow');
-    let modButton = document.getElementById('nav_button'); 
-    let logo = document.getElementById('logo'); 
-
-    // Definimos la altura máxima del scroll antes del cambio de color
-    let max_cap = 100;
 
     // Si la posición de scroll supera cierto umbral, mostramos una flecha flotante
     if (this.window.scrollY > 500)
@@ -17,18 +10,6 @@ window.addEventListener('scroll', function() {
     else
         floating_arrow.style.display = 'none';
 
-    // Si el usuario ha hecho scroll más allá del límite, cambiamos los estilos
-    if (window.scrollY > max_cap) {
-        header.classList.add('bg_white');
-        ul.classList.add('text_black');
-        modButton.classList.add('btn_black');
-        logo.src = 'img/logo/logoMain.png';
-    } else {
-        header.classList.remove('bg_white');
-        ul.classList.remove('text_black');
-        modButton.classList.remove('btn_black');
-        logo.src = 'img/logo/logoMainB.png';
-    }
 });
 
 ///////////////////////////////////
@@ -103,3 +84,63 @@ document.addEventListener("DOMContentLoaded", function() {
 window.addEventListener('resize', function() {
     window.location.reload();
 });
+
+
+///////////////////////////////////////////////////
+// FUNCIONALIDAD DEL HEADER COLOR SCROLL
+///////////////////////////////////////////////////
+
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.getElementById('main-header');
+ 
+    // Verifica la posición del scroll al cargar la página
+    if(window.scrollY > 0) {
+        // Si la posición del scroll es mayor que 0, quita la clase 'scroll' del header
+        header.classList.remove('scroll');
+    } else {
+        // Si la posición del scroll es 0, añade la clase 'scroll' al header
+        header.classList.add('scroll');
+    }
+ });
+ 
+ // Detecta el evento de scroll
+ window.addEventListener('scroll', function() {
+   const header = document.getElementById('main-header');
+   let logo = document.getElementById( 'logo' ); 
+
+   // Verifica la posición del scroll
+   if(window.scrollY > 0) {
+     // Si la posición del scroll es mayor que 0, quita la clase 'scroll' del header
+     header.classList.remove('scroll');
+     logo.src = 'img/logo/logoMain.png';
+   } else {
+     // Si la posición del scroll es 0, añade la clase 'scroll' al header
+     header.classList.add('scroll');
+     logo.src = 'img/logo/logoMainB.png';
+   }
+ });
+ 
+ 
+ ///////////////////////////////////////////////////
+ // FUNCIONALIDAD DEL HEADER MENU HAMBURGUESA
+ ///////////////////////////////////////////////////
+ // Show menu
+ const navMenu = document.getElementById('nav-menu'),
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close');
+ 
+ // Toggle Menu
+ const toggleMenu = () => {
+    if (navMenu.classList.contains('show-menu')) {
+        navMenu.classList.remove('show-menu');
+    } else {
+        navMenu.classList.add('show-menu');
+    }
+ };
+ 
+ // Menu show
+ navToggle.addEventListener('click', toggleMenu);
+ 
+ // Menu hidden
+ navClose.addEventListener('click', toggleMenu);
+ 

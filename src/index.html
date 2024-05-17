@@ -14,6 +14,9 @@
 
     <!-- ICONOS font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- ICONOS Remix-icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
     
 </head>
 <body>
@@ -23,24 +26,51 @@
     //HEADER
     //////////////////////////////////// 
     -->
-    <div id="black"></div>
-    <button id="toggle-btn"><img src="icon/bars-solid.svg" alt=""></button>
-    <header id="header">
-        <!-- Logo en la izquierda -->
-        <a href="index.html"><img src="img/logo/logoMainB.png" id="logo" alt="Logo"></a>
-        <!-- <button id="close-btn"><img src="img/menú/icons8-x-50.png" alt=""></button> -->
-        <!-- Menú en la derecha -->
-        <nav>
-            <ul id="ul_navbar">
-                <li><a href="#inicio"><p>Inicio</p></a></li>
-                <li><a href="#nuestros_juegos"><p>Juegos</p></a></li>
-                <li><a href="#productos"><p>Productos</p></a></li>
-                <li><a href="#personajes_menu"><p>Personajes</p></a></li>
-                <li><a href="#quienes_somos"><p>Quienes somos</p></a></li>
-                <li id="nav_button"><a href="clientes/login.html">Área Clientes</a></li>
+    <header class="main-header" id="main-header">
+        <nav class="main-nav container-header">
+          <a href="#" class="main-nav__logo"><img src="img/logo/logoMain.png" alt="Logo"  id="logo"></a>
+    
+          <div class="main-nav__menu" id="nav-menu">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="#inicio" class="main-nav__link">Inicio</a>
+              </li>
+    
+              <li class="main-nav__item">
+                <a href="#nuestros_juegos" class="main-nav__link">Juegos</a>
+              </li>
+    
+              <li class="main-nav__item">
+                <a href="#productos" class="main-nav__link">Planes</a>
+              </li>
+    
+              <li class="main-nav__item">
+                <a href="#personajes_menu" class="main-nav__link">Personajes</a>
+              </li>
+    
+              <li class="main-nav__item">
+                <a href="#quienes_somos" class="main-nav__link">Quienes Somos</a>
+              </li>
             </ul>
+    
+            <!-- Close button -->
+            <div class="main-nav__close" id="nav-close">
+              <i class="ri-close-line"></i>
+            </div>
+    
+          </div>
+    
+          <div class="main-nav__actions">
+            <!-- Login button -->
+            <i class="ri-user-line main-nav__login" id="login-btn"></i>
+    
+            <!-- Toggle button -->
+            <div class="main-nav__toggle" id="nav-toggle">
+              <i class="ri-menu-line"></i>
+            </div>
+          </div>
         </nav>
-    </header>
+      </header>
 
         
     <!-- 
@@ -328,7 +358,6 @@
 
         <!-- Legal -->
         <div>
-            
             <ul>
                 <h4><b>Legal</b></h4>
                 <li><a href="#">Térmiso de uso</a></li>
