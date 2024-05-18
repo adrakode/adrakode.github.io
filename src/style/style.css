@@ -319,7 +319,6 @@ button {
     display: flex;
     width: 100%;
     /* propiedades para alinear las cartas mejor */
-    flex-wrap: wrap;
     /* align-items: center; */
     justify-content: space-between;
     min-height: 50vh;
@@ -815,10 +814,6 @@ button {
     }
 
 
-
-
-
-
     /* Productos */
     .planes {
         flex-direction: column;
@@ -934,6 +929,7 @@ button {
     }
 
     .hero-content h1{
+        margin-top: 2rem;
         font-size: 2.5rem;
     }
 
