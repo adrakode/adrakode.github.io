@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+
 .contenedor-global {
     display: flex;
     align-items: center;
@@ -11,6 +19,9 @@
     flex-wrap: wrap;
     text-align: center;
     padding: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 
@@ -33,6 +44,14 @@
     max-width: 330px;
     padding: 15px;
     margin: 0 10px; /* Espaciado entre los dos contenedores */
+}
+.formulario .campo {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Add line break after each element */
+    flex-direction: column;
+    text-align: left;
 }
 .formulario .email {
     margin-top: 10px;
@@ -112,6 +131,32 @@ header {
     font-size: 15px;
     color: #050505;
     
+}
+.flechaAtras a {
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0;
+    color: #050505;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+}
+.flechaAtras a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #050505;
+    bottom: 0;
+    left: 0;
+    transition: width 0.4s ease;
+}
+
+/* Expande la línea al hacer hover */
+.flechaAtras a:hover::after{
+    width: 100%;
 }
 .flechaAtras a{
     text-decoration: none;
