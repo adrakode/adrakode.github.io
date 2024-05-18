@@ -66,8 +66,8 @@
 
             <div class="main-nav__actions">
                 <!-- Login button -->
-                <i class="ri-user-line main-nav__login" id="login-btn"></i>
-
+                <a href="clientes/login.html"><i class="ri-user-line main-nav__login" id="login-btn"></i></a>
+                
                 <!-- Toggle button -->
                 <div class="main-nav__toggle" id="nav-toggle">
                     <i class="ri-menu-line"></i>
@@ -82,20 +82,24 @@
     //HERO
     //////////////////////////////////// 
     -->
-    <div class="wallpaper" id="inicio">
-        <div>
-            <h1 class="col_white">Explora, Conquista y Alcanza tu Cima</h1>
-
-            <div class="wallpaper_description col_white">
-                <p>Sumérgete en un mundo lleno de posibilidades y peligros. Inspirado en Elden Ring, Dark Souls y más,
-                    AdraKode te desafía a descubrir tu verdadero destino.</p>
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1 class="max-width">Explora, Conquista y Alcanza tu Cima</h1>
+            <p class="max-width">
+                Sumérgete en un mundo lleno de posibilidades y peligros. Inspirado en Elden Ring, Dark Souls y más,
+                AdraKode te desafía a descubrir tu verdadero destino.
+            </p>
+            <div class="hero-buttons">
+                <button class="hero-button primary"><a href="#quienes_somos">Ver más</a></button>
+                <button class="hero-button secondary">
+                    <a href="clientes/login.html">Iniciar sesión<span class="arrow">→</span></a>
+                </button>
             </div>
-
-            <span class="mod_button" style="margin-right: 10px;"><a href="clientes/login.html">Iniciar sesión</a></span>
-            <a class="col_white bg black" href="#">Ver más <img class="right_arrow" src="icon/arrow-right-solid.svg"
-                    alt=""></a>
         </div>
-    </div>
+    </section>
+
+
+    <!-- Flecha volver arriba -->
 
     <div id="floating_arrow">
         <a href="#inicio"><img src="icon/arrow-up-solid.svg" alt=""></a>
@@ -184,7 +188,7 @@
                 <h3>Plan gratuito</h3>
                 <h1>0€/mes</h1>
 
-                <span class="mod_button black"><a href="clientes/login.html">Empieza gratis</a></span>
+                <span class="mod_button btn_black"><a href="clientes/login.html">Empieza gratis</a></span>
 
                 <ul>
                     <li>Acceso a un juego en modo offline</li>
@@ -216,7 +220,7 @@
                 <h3>Plan premium</h3>
                 <h1>19€/mes</h1>
 
-                <span class="mod_button black"><a href="clientes/login.html">Inscríbete ahora</a></span>
+                <span class="mod_button btn_black"><a href="clientes/login.html">Inscríbete ahora</a></span>
 
                 <ul>
                     <li>Acceso anticipado a versiones beta</li>
