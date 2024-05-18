@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../style/style.css">
+    <!-- <link rel="stylesheet" href="../style/style.css"> -->
 
         <!-- FUENTES -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,86 +14,62 @@
     
 </head>
 <body>
-    <header id="header">
+    <header id="header" class="headerLogin">
         <!-- Logo en la izquierda -->
-        <a href="../index.html"><img src="../img/logo/logoMainB.png" id="logo" alt="Logo"></a>
 
-        <!-- Menú en la derecha -->
-        <nav>
-            <ul id="ul_navbar">
-                <li><a href="../index.html#inicio"><p>Inicio</p></a></li>
-                <li><a href="../index.html#nuestros_juegos"><p>Juegos</p></a></li>
-                <li><a href="../index.html#productos"><p>Productos</p></a></li>
-                <li><a href="../index.html#personajes_menu"><p>Personajes</p></a></li>
-                <li><a href="../index.html#quienes_somos"><p>Quienes somos</p></a></li>
-                <li id="nav_button"><a href="../clientes/login.html">Área Clientes</a></li>
-            </ul>
-        </nav>
-    </header>
-    <form class="formulario">
-        <h1>INICIAR SESIÓN</h1>
-        <div class="contenedor">
-            <div class="input-contenedor">
-                <input type="text" placeholder="Correo electronico" required>
-            </div>
-
-            <div class="input-contenedor">
-                <input type="password" placeholder="Contraseña" required>
-            </div>
-
-            <input type="submit" value="INICIAR SESIÓN" class="boton2" >
-            <div class="separator"><span class="o">o</span></div>
-            <a href="registro.html" class="boton"><span class="inicio">CREAR CUENTA</span></a>
-            <p style="margin-top: 20px;">¿Quieres volver al sitio? Pulsa <a class="link" href="../index.html">aquí</a></p>
-            <input type="checkbox" id="verificacion" required>
-            <label for="verificacion">Al hacer clic, acepta nuestras Condiciones de servicio y Política de privacidad</label>
+        <div class="flechaAtras">
+            <img src="icon/flecha izquierda .png" alt="">
+            <a href="../index.html"><p class="atras">ATRÁS</p></a>
         </div>
-    </form>
+        <div class="logo">
+            <a href="../index.html"><img src="../img/logo/logoMain.png" id="logo" alt="Logo"></a>
+        </div>
         
-    <!-- Footer -->
-    <footer class="bg_black">
-
-        <!-- Información -->
-        <div>
-            <ul>
-                <li><a href="index.html">AdraKode Inc.</a></li>
-                <li><a href="#">Acerca de nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
+    </header>
+    <h1>INICIAR SESIÓN</h1>
+    <div class="contenedor-global">
+        <div class="formulario">
+            <form>
+                <div class="email">
+                    <label for="correo">CORREO ELECTRÓNICO</label>
+                    <input type="text" placeholder="nombre@ejemplo.com" required>
+                </div>
+                <div class="password">
+                    <label for="password">CONTRASEÑA </label>
+                    <input type="password" placeholder="Contraseña" required>
+                </div>
+                <div class="boton"> 
+                    <input type="submit" id="iniciar_sesion" value="INICIAR SESIÓN" >
+                    <a href="registro.html" id="crear_cuenta">CREAR CUENTA</a>
+                </div>   
+            </form>
         </div>
-
-        <!-- Soporte -->
-        <div>
-            <ul>
-                <h4><b>Soporte</b></h4>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Soporte técnico</a></li>
-                <li><a href="#">Guías de usuario</a></li>
-                <li><a href="#">Foro de la comunidad</a></li>
-            </ul>
+        <div class="inicioRapido">
+                
+                <div class="pagina">
+                    <img src="icon/google.png" alt="" class="">
+                    <input type="text" value="Continuar con Google" readonly>
+                </div>
+                <div class="pagina">
+                    <img src="icon/apple.png" alt=""class="inicio">
+                    <input type="text" value="Continuar con Apple" readonly>
+                </div>
+                <div class="pagina"> 
+                    <img src="icon/facebook.png" alt=""class="inicio">
+                    <input type="text" value="Continuar con Facebook" readonly>
+                </div>
+            </div>
+    </div>
+    <div class="contenedor">
+        <div class="separadores">
+            <div class="separator1"></div>
+            <div class="o"><span class="o">o</span></div>
+            <div class="separator2"></div>
         </div>
-
-        <!-- Legal -->
-        <div>
-            
-            <ul>
-                <h4><b>Legal</b></h4>
-                <li><a href="#">Térmiso de uso</a></li>
-                <li><a href="#">Política de privacidad</a></li>
-                <li><a href="#">Derechos de autor</a></li>
-            </ul>
+        <div class="contenedor-verificacion">
+            <input type="checkbox" id="verificacion" required>
+            <label for="verificacion" class="textoaceptar">Al hacer clic, acepta nuestras Condiciones de servicio y Política de privacidad</label>
         </div>
-
-        <!-- RRSS -->
-        <div class="rrss">
-            <ul>
-                <li><a href="#"><img src="../icon/x-twitter.svg" alt=""></a></li>
-                <li><a href="#"><img src="../icon/facebook-f.svg" alt=""></a></li>
-                <li><a href="#"><img src="../icon/instagram.svg" alt=""></a></li>
-                <li><a href="#"><img src="../icon/reddit-alien.svg" alt=""></a></li>
-                <li><a href="#"><img src="../icon/youtube.svg" alt=""></a></li>
-            </ul>
-        </div>
-    </footer>
+    </div>
 </body>
 </html>
