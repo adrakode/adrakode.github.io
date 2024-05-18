@@ -286,6 +286,7 @@ button {
     /* align-items: center; */
     justify-content: space-between;
     min-height: 50vh;
+    align-items: center;
 }
 
 .card {
@@ -424,7 +425,7 @@ button {
 }
 
 .plan:hover {
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 1);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
     transform: translate(-10px, 10px);
 }
 
@@ -467,6 +468,7 @@ button {
 
 .accordion p {
     padding: 10px 0 30px 0;
+    text-align: justify;
 }
 
 .accordion-item {
@@ -549,7 +551,7 @@ button {
 /* ------------------------------------------------------------------------------ */
 
 .footer {
-    background-color: #222;
+    background-color: #1a1a1a;
     color: #f6f6f6;
     padding: 20px;
 }
@@ -625,7 +627,7 @@ button {
 .copyright {
     text-align: center;
     padding-top: 10px;
-    border-top: 2px solid #333333;
+    border-top: 2px solid #333;
     margin-top: 20px;
 }
 
@@ -634,45 +636,38 @@ button {
 /* ------------------------------------------------------------------------------ */
 /* Media queries */
 /* ------------------------------------------------------------------------------ */
-@media screen and (max-width: 768px) {
 
-    #toggle-btn {
+/* Dispositivos pantallas grandes */
+@media screen and (min-width: 1025px) {
+    button#toggle-btn {
+        display: none;
+    }
+
+    /* nav {
+        display: none;
+    } */
+
+    nav.show {
         display: block;
-        border: 0px;
-        background-color: transparent;
-        width: 30px;
-        position: fixed;
-        z-index: 200000;
-        margin: 10px;
-        top: 100;
-        left: 100;
     }
 
-    .planes {
-        flex-direction: column;
-        align-items: center;
+    nav ul li {
+        display: inline;
     }
 
-    .plan {
-        width: 300px;
-        margin-bottom: 20px;
-    }
-
-    .wallpaper>div {
-        width: 50%;
-    }
-
-    .content-box {
-        width: 90%;
-    }
-
-    .containerflip {
-        align-items: center;
-        justify-content: center;
+    nav ul li a p {
+        display: inline-block;
     }
 }
 
-@media screen and (max-width: 1024px) {
+
+/* HEADER & FOOTER RESPONSIVE */
+/* Dispositivos tablets */
+@media screen and (max-width: 1025px) {
+    /* Generales */
+    .content-box {
+        width: 70%;
+    }
 
     #toggle-btn {
         display: block;
@@ -685,7 +680,6 @@ button {
         top: 100;
         left: 100;
     }
-
     nav ul li {
         display: block;
     }
@@ -709,33 +703,37 @@ button {
         overflow-y: hidden;
     }
 
-}
-
-@media screen and (min-width: 1025px) {
-    button#toggle-btn {
-        display: none;
+    .wallpaper>div {
+        width: 50%;
     }
 
-    /* nav {
-        display: none;
-    } */
 
-    nav.show {
-        display: block;
+    /* Productos */
+    .planes {
+        flex-direction: column;
+        align-items: center;
     }
 
-    nav ul li {
-        display: inline;
+    .plan {
+        width: 100%;
+        margin-bottom: 30px;
     }
 
-    nav ul li a p {
-        display: inline-block;
-    }
-}
 
-/* HEADER & FOOTER RESPONSIVE */
-/* Navigation for tablet devices */
-@media screen and (max-width: 992px) {
+    /* Cards */
+    .containerflip {
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+    }
+
+    .card{
+        width: 100%;
+        height: 350px;
+    }
+
+
+
     /* Header */
     .container-header {
         max-width: 100%;
@@ -787,6 +785,7 @@ button {
     }
 
 
+
     /* Footer */
     .footer-content {
         flex-direction: column;
@@ -803,8 +802,34 @@ button {
     }
 }
 
-/* Navigation for mobile devices */
+/* Dispositivos móviles */
 @media screen and (max-width: 576px) {
+    /* Generales */
+    .content-box {
+        width: 90%;
+    }
+
+    .content-box h1{
+        font-size: 2.5rem;
+    }
+    
+    /* Cards */
+    .card{
+        margin: 20px 0;
+    }
+
+    .card .back h3 {
+        margin-top: 10px;
+        font-size: 25px;
+        letter-spacing: normal;
+    }
+
+    .card .back p {
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    /* Header */
     .main-nav__menu {
         left: 0;
         width: 100%;
