@@ -1,136 +1,222 @@
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-
-body{
-    margin: 10% 0 0 0;
-    background: url(../img/hero/heroImg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: "Poppins", sans-serif;
-}
-
-.contenedor{
+.contenedor-global {
+    display: flex;
+    align-items: center;
     width: 100%;
-    padding: 15px;
-    border-radius: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 20px;
 }
-.formulario{
-    background: white;
-    margin-top: 100px;
-    border: 2px solid #ccc;
-    border-radius: 10px; 
-    padding: 20px; 
+
+
+.formulario {
+
+    /* flex-direction: row; Asegura que el contenido interno esté en columna */
+    /* border: 1px solid #ccc; Agrega un borde si es necesario */
+    width: 50%;
+    max-width: 330px;
+    padding: 30px;
+    margin: 0 10px; /* Espaciado entre los dos contenedores */
+
+}
+
+.inicioRapido {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid #ccc; Agrega un borde si es necesario */
+    width: 50%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 10px; /* Espaciado entre los dos contenedores */
+}
+.formulario .email {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Add line break after each element */
+    flex-direction: column;
+    text-align: left;
+}
+.formulario .password {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    flex-wrap: wrap; /* Add line break after each element */
+    flex-direction: column;
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+.boton #iniciar_sesion{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #1DA1F2;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+.boton #crear_cuenta{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #1DA1F2;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.contenedor-global .inicioRapido {
+    display: flex;
+    margin-top: 0;
+}
+
+.inicioRapido .pagina {
+    padding: 5px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+}
+.flechaAtras{
+    padding-top: 0px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+#logo{
+    width: 90px;
+    height: auto;
+    padding-right: 20px;
+    padding-top: 20px;
+    
+}
+.atras{
+    padding-left: 5px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    color: #050505;
+    
+}
+.flechaAtras a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.contenedor{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.separator1 {
+    width: 1px; 
+    height: 100px;
+    background-color: #646262; 
+    opacity: 0.5;
+    align-items: center;
+
+
+}
+.separator2 {
+    width: 1px; 
+    height: 100px;
+    background-color: #646262; 
+    opacity: 0.5;
+    align-items: center;
+
    
 }
-h1{
-    padding-top: 20px;
+.separadores{
+    width: 1px;
+   margin-left: 0%;
+   margin-top: -18%;
+    
+}
+.contenedor-verificacion {
+    align-items: center;
     text-align: center;
-    color: #222;
-    font-size: 40px;
-    font-weight: 800;
-    font-style: normal;
-    font-family: "Poppins", sans-serif;
-}
-input[type="text"], input[type="password"] {
-    text-align: left;
-    font-size: 20px;
-    width: 80%;
-    padding: 10px;
-    border: none;
-    font-family: "Poppins", sans-serif;
-}
-
-.input-contenedor {
-    margin-bottom: 15px;
-    border: 1px solid #aaa;
-}
-.boton{
-    border: none;
     width: 100%;
-    font-size: 20px;
-    color: white;
-    background-color: #1AA0F2;
-    padding: 10px 137px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: 600px;
-    text-decoration: none;
-    font-family: "Poppins", sans-serif;
-  
-}
-.inicio{
-    position: relative;
-    left: 15px;
-}
-.separator {
-    /* border-top: 1px solid black; Estilo de la línea */
-    margin: 20px 0; /* Espacio vertical */
-    position: relative; /* Añadido para el posicionamiento relativo */
-}
-
-.separator::before,
-.separator::after {
-    content: "";
-    position: absolute;
-    height: 1px; /* Altura de la línea */
-    background-color: black; /* Color de la línea */
-    top: 50%; /* Posición verticalmente centrada */
-}
-
-.separator::before {
-    width: 180px; /* Longitud de la línea antes de la letra */
-    left: 0px; /* Posiciona la línea antes de la letra */
-}
-
-.separator::after {
-    width: 180px; /* Longitud de la línea después de la letra */
-    right: 0px; /* Posiciona la línea después de la letra */
+    padding: 10px;
+    margin: 40px 0;
 }
 .o{
-    position: relative;
-    right:-50%;
-    top: -50%;
+    color: #646262;
+    opacity: 0.5;    
+    margin-left:   -2px;
 }
-.boton2{
-    border: none;   
-    width: 100%;
-    font-size: 20px;
-    color: white;
-    background-color: black;
-    padding: 10px 149px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-family: "Poppins", sans-serif;
-}
-.boton:hover{
-    background-color: #1AA0F2;
-}
-p{
+h1{
     text-align: center;
-    font-family: "Poppins", sans-serif;
 }
-.textoaceptar{
-    font-family: "Poppins", sans-serif;
+.inicioRapido .pagina {
+    display: flex;
+    align-items: center;
+    padding: 5px;
 }
-#verificacion{
-    font-family: "Poppins", sans-serif;
-    margin-top: 20px;
+
+.inicioRapido .pagina img {
+    margin-right: 10px;
 }
-.link{
-    text-decoration: none;
-    color: #1a2537;
-    font-weight: 600px;
+
+.inicioRapido .pagina input {
+    border: none;
+    background: none;
+    color: black;
+    text-align: left;
+    font-size: 16px;
+    width: 100%;
 }
-.link:hover{
-    color: #1AA0F2;
-}
-@media(min-width: 768px){
-    .formulario{
-        width: 500px;
-        margin-top: 150px;
-        margin: auto;
-        border-radius: 2%;
+@media (max-width: 768px) {
+    .separadores{
+       height: 1px;
+       margin-top: -30%;
+        margin-left: 20px;
+    }
+    .separator1 {
+        width: 100px; 
+        height: 1px;
+        background-color: #646262; 
+        opacity: 0.5;
+        align-items: center;
+    
+    
+    }
+    .separator2 {
+        width: 100px; 
+        height: 1px;
+        background-color: #646262; 
+        opacity: 0.5;
+        margin-left: -120px;
+        margin-top: -9px;
+        
+    }
+    .o {
+        margin: 0 5px;
+        margin-top: -10px;
+        margin-left: -7px;
+    }
+    .contenedor-verificacion {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+        margin: 140px 0;
     }
 }
