@@ -15,54 +15,65 @@
 </head>
 <body>
     <header id="header">
-        <div class="flecha">
+        <!-- Logo en la izquierda -->
+
+        <div class="flechaAtras">
             <img src="icon/flecha izquierda .png" alt="">
-            <a href="../index.html"><p class="atrás">ATRÁS</p></a>
-            
+            <a href="../index.html"><p class="atras">ATRÁS</p></a>
         </div>
-    </header>
-    <form class="formulario">
         <div class="logo">
             <a href="../index.html"><img src="../img/logo/logoMain.png" id="logo" alt="Logo"></a>
-            </div>
-        <h1>REGISTRO</h1>
-        <div class="contenedor">
-            <div class="input-contenedor">
+        </div>
+        
+    </header>
+    <h1>REGISTRO</h1>
+    <div class="contenedor-global">
+        <div class="formulario">
+            <form>
                 <div class="campo">
-                <label for="nombre">NOMBRE DE USUARIO</label>
-                <input type="text" placeholder="Nombre de usuario" required>
-            </div>
-            
-            <div class="campo">
-                <label for="correo">CORREO ELECTRÓNICO</label>
-                <input type="text" placeholder="nombre@ejemplo.com" required>
-            </div>
-            <div class="campo">
-                <label for="correo">CONTRASEÑA </label>
-                <input type="password" placeholder="Contraseña" required>
-            </div>
-            </div>
-            <div class="boton"> 
+                    <label for="nombre">NOMBRE DE USUARIO</label>
+                    <input type="text" placeholder="Nombre de usuario" required>
+                </div>
+                <div class="email">
+                    <label for="correo">CORREO ELECTRÓNICO</label>
+                    <input type="text" placeholder="nombre@ejemplo.com" required>
+                </div>
+                <div class="password">
+                    <label for="password">CONTRASEÑA </label>
+                    <input type="password" placeholder="Contraseña" required>
+                </div>
+                <div class="boton"> 
+                    <input type="submit" id="iniciar_sesion" value="INICIAR SESIÓN" >
+                    <a href="registro.html" id="crear_cuenta">CREAR CUENTA</a>
+                </div>   
+            </form>
+        </div>
+        <div class="inicioRapido">
                 
-                <input type="submit" value="CREAR CUENTA" >
+                <div class="pagina">
+                    <img src="icon/google.png" alt="" class="">
+                    <input type="text" value="Continuar con Google" readonly>
+                </div>
+                <div class="pagina">
+                    <img src="icon/apple.png" alt=""class="inicio">
+                    <input type="text" value="Continuar con Apple" readonly>
+                </div>
+                <div class="pagina"> 
+                    <img src="icon/facebook.png" alt=""class="inicio">
+                    <input type="text" value="Continuar con Facebook" readonly>
+                </div>
             </div>
-            
-            <a href="login.html" class="boton">INICIAR SESIÓN</a>
-            <div class="separator1-registro"></div>
-            <span class="o">o</span>
-            <div class="separator2-registro"></div>
-
-            <div class="inicioRapido">
-                <div class="pagina"><input type="text" value="Continuar con google"></div>
-                <div class="pagina"><input type="text" value="Continuar con email"></div>
-            </div>
-            <div class="contenedor-verificacion-registro">
+    </div>
+    <div class="contenedor">
+        <div class="separadores">
+            <div class="separator1"></div>
+            <div class="o"><span class="o">o</span></div>
+            <div class="separator2"></div>
+        </div>
+        <div class="contenedor-verificacion">
             <input type="checkbox" id="verificacion" required>
             <label for="verificacion" class="textoaceptar">Al hacer clic, acepta nuestras Condiciones de servicio y Política de privacidad</label>
-            </div>
-    </form>
-
-    
-    </footer>
+        </div>
+    </div>
 </body>
 </html>
