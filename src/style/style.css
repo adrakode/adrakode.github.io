@@ -686,7 +686,197 @@ button {
 /* LOGIN & REGISTER */
 /* ------------------------------------------------------------------------------ */
 
+/* Header Styles */
+.login_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+}
 
+.login_back-arrow {
+    display: flex;
+    align-items: center;
+}
+
+.login_back-text {
+    padding-left: 5px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    color: #1a1a1a;
+}
+
+.login_back-arrow a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    color: #1a1a1a;
+}
+
+.login_back-arrow a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #1a1a1a;
+    bottom: 0;
+    left: 0;
+    transition: width 0.4s ease;
+}
+
+.login_back-arrow a:hover::after {
+    width: 100%;
+}
+
+.login_logo-container {
+    padding-top: 20px;
+}
+
+.login_logo {
+    width: 90px;
+    height: auto;
+    padding-right: 20px;
+}
+
+/* Main Container Styles */
+.login_tituloLogin {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.login_main-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 20px;
+}
+
+.login_form-container {
+    width: 50%;
+    max-width: 330px;
+    padding: 30px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login_form-container label {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.login_form-container input {
+    padding: 10px 0;
+    border: none;
+    border-radius: 10px;
+}
+
+.login_username-field,
+.login_email-field,
+.login_password-field,
+.login_form-container .login_button-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: left;
+}
+
+.login_button-container {
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+.login_submit-button, .login_create-account-link {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.login_submit-button {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #1DA1F2;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.login_create-account-link {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #1DA1F2;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Quick Login Styles */
+.login_quick-login {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 10px;
+}
+
+.login_quick-login .login_login-option {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.login_quick-login .login_login-option img {
+    margin-right: 10px;
+}
+
+.login_quick-login .login_login-option input {
+    border: none;
+    background: none;
+    color: #1a1a1a;
+    text-align: left;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Separator Styles */
+.login_separator-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -300px;
+}
+
+.login_separator {
+    width: 1px;
+    height: 100px;
+    background-color: #333;
+    opacity: 0.5;
+}
+
+.login_separator-text {
+    color: #333;
+    opacity: 0.5;
+    margin-top: 2px;
+}
+
+/* Verification Styles */
+.login_verification-container {
+    text-align: center;
+    padding: 10px;
+    margin-top: 5rem;
+}
 
 
 
@@ -927,7 +1117,54 @@ button {
 
 
 /* Responsive Login & Register */
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .login_logo {
+        width: 70px;
+        height: auto;
+    }
 
+    .login_tituloLogin {
+        margin-top: 20px;
+    }
+    
+    .login_main-container {
+        padding: 0;
+    }
+
+    .login_form-container, .login_quick-login {
+        width: 100%;
+    }
+
+    .login_quick-login {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login_separator-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -160px;
+    }
+
+    .login_separator {
+        flex: 1;
+        height: 1px;
+        background-color: #333;
+        opacity: 0.5;
+    }
+
+    .login_separator-text {
+        margin-top: -5px;
+    }
+
+    .login_verification-container {
+        text-align: center;
+        padding: 10px;
+        margin: 150px 0;
+    }
+}
 
 
 
