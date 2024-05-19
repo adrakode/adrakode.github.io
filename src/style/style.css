@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5 {
     font-style: normal;
 }
 
-p, a, ul, ol {
+p, a, ul, ol, input, label {
     font-family: "Open Sans", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -696,6 +696,22 @@ button {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ------------------------------------------------------------------------------ */
 /* Media queries */
 /* ------------------------------------------------------------------------------ */
@@ -724,7 +740,6 @@ button {
 }
 
 
-/* HEADER & FOOTER RESPONSIVE */
 /* Dispositivos tablets */
 @media screen and (max-width: 1025px) {
     /* Generales */
@@ -908,6 +923,15 @@ button {
         align-items: center;
     }
 }
+
+
+
+/* Responsive Login & Register */
+
+
+
+
+
 
 
 
