@@ -1,10 +1,10 @@
+/* Reset y estilo base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
-    /* Al hacer scroll, tenga animación*/
-    transition: 1.5s ease;
+    scroll-behavior: smooth; /* Al hacer scroll, tenga animación */
+    transition: 1.5s ease; /* Transiciones suaves */
 }
 
 body {
@@ -28,8 +28,6 @@ a {
     text-decoration: none;
 }
 
-
-
 /* ------------------------------------------------------------------------------ */
 /* GENERALES */
 /* ------------------------------------------------------------------------------ */
@@ -39,8 +37,7 @@ a {
     background-color: #f6f6f6;
     padding: 10px;
     margin: 10px 0;
-    transition: background-color 0.5s, color 0.5s;
-    /* Consolidar transiciones */
+    transition: background-color 0.5s, color 0.5s; /* Consolidar transiciones */
     text-align: center;
 }
 
@@ -59,7 +56,6 @@ a {
 .mod_button.black {
     background-color: #1a1a1a;
     color: #f6f6f6;
-
 }
 
 .col_white {
@@ -101,15 +97,11 @@ button {
     width: 60%;
     margin: 30px auto;
     padding: 20px;
-    /* background-color: red;  */
-    /* box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);  */
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-
 
 /* ------------------------------------------------------------------------------ */
 /* Header */
@@ -161,7 +153,7 @@ button {
 }
 
 .main-nav__login {
-    font-size:  1.5rem;
+    font-size: 1.5rem;
     font-weight: 500;
     color: #f6f6f6;
 }
@@ -172,7 +164,6 @@ button {
     column-gap: 3rem;
 }
 
-
 .main-nav__close,
 .main-nav__toggle {
     display: none;
@@ -182,17 +173,14 @@ button {
     color: #f6f6f6;
     font-weight: 600;
     position: relative;
-    /* Asegura que los ::after se posicionen relativamente a los enlaces */
     transition: color .4s;
 }
 
-/* Linea en hover */
 .main-nav__item a::after {
     content: '';
     position: absolute;
     left: 0;
     bottom: 0;
-    /* Ajusta la posición del subrayado para que esté justo debajo del enlace */
     width: 0;
     height: 2px;
     background-color: #1AA0F2;
@@ -203,8 +191,6 @@ button {
     width: 100%;
 }
 
-
-/* Estilos para el header cuando se hace scroll */
 .main-header.scrolled {
     background-color: #f6f6f6;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
@@ -214,7 +200,6 @@ button {
 .main-header.scrolled .main-nav__login {
     color: #1a1a1a;
 }
-
 
 /* ------------------------------------------------------------------------------ */
 /* HERO */
@@ -227,19 +212,19 @@ button {
     height: 100vh;
     display: flex;
     align-items: center;
-
     justify-content: center;
     color: #f6f6f6;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
+
 .hero-content {
     max-width: 60%;
     padding: 20px;
 }
 
-.hero .max-width{
+.hero .max-width {
     width: 50%;
- }
+}
 
 .hero h1 {
     font-size: 3em;
@@ -253,7 +238,7 @@ button {
     padding: 0.5rem 0 6rem 0;
 }
 
-.hero a{
+.hero a {
     color: #f6f6f6;
 }
 
@@ -272,12 +257,12 @@ button {
     transition: background-color 0.3s;
 }
 
-.hero-button a{
+.hero-button a {
     font-weight: 700;
 }
 
 .hero-button.primary {
-    background: #1AA0F2; /* Color de fondo del primer botón */
+    background: #1AA0F2;
     color: #f6f6f6;
     border-radius: 10px;
 }
@@ -300,17 +285,11 @@ button {
     transform: translateX(5px);
 }
 
-
-
-
-
 /* Flecha volver arriba */
 .right_arrow {
     margin-left: 4px;
     width: 8px;
 }
-
-
 
 /* ------------------------------------------------------------------------------ */
 /* Cartas */
@@ -318,8 +297,6 @@ button {
 .containerflip {
     display: flex;
     width: 100%;
-    /* propiedades para alinear las cartas mejor */
-    /* align-items: center; */
     justify-content: space-between;
     min-height: 50vh;
     align-items: center;
@@ -329,7 +306,6 @@ button {
     position: relative;
     width: 300px;
     height: 350px;
-    /* Aplicar margenes con resto de cartas */
     margin: 20px;
 }
 
@@ -352,7 +328,6 @@ button {
     position: absolute;
     width: 100%;
     height: 100%;
-    /* indica como el contenido de un elemento deberá ser redimensionado para ajustarse a su contenedor */
     object-fit: cover;
 }
 
@@ -399,11 +374,11 @@ button {
 }
 
 .card:hover .front {
-    transform: perspective(600px)rotateY(180deg);
+    transform: perspective(600px) rotateY(180deg);
 }
 
 .card:hover .back {
-    transform: perspective(600px)rotateY(360deg);
+    transform: perspective(600px) rotateY(360deg);
 }
 
 /* Flecha flotante */
@@ -422,12 +397,9 @@ button {
     display: block;
 }
 
-
-
 /* ------------------------------------------------------------------------------ */
 /* Productos */
 /* ------------------------------------------------------------------------------ */
-
 .planes {
     width: 100%;
     height: fit-content;
@@ -448,7 +420,8 @@ button {
     flex-direction: column;
     justify-content: space-between;
 }
-.plan a{
+
+.plan a {
     color: #1a1a1a;
 }
 
@@ -457,14 +430,15 @@ button {
     padding: 0;
 }
 
-.plan h3{
+.plan h3 {
     text-transform: uppercase;
 }
 
 .btn_black {
     background-color: #1a1a1a;
 }
-.btn_black a{
+
+.btn_black a {
     color: #f6f6f6;
 }
 
@@ -488,10 +462,8 @@ button {
     padding: 10px;
     font-size: 12px;
     background: linear-gradient(to right, rgb(85, 158, 241), rgb(243, 183, 52));
-    /* Degradado de negro a rojo */
     background-clip: text;
     -webkit-background-clip: text;
-    /* Aplicar el fondo solo al texto */
     -webkit-text-fill-color: transparent;
     text-decoration: none;
     border: 1px rgba(255, 255, 255, 0.201) solid;
@@ -510,11 +482,9 @@ button {
     padding: 10px 0;
 }
 
-
 /* ------------------------------------------------------------------------------ */
 /* Acordeon */
 /* ------------------------------------------------------------------------------ */
-
 .accordion p {
     padding: 10px 0 30px 0;
     text-align: justify;
@@ -540,7 +510,6 @@ button {
 .accordion-header h4 {
     margin-left: 25px;
     display: inline;
-    /* Para que no ocupe todo el ancho */
 }
 
 .accordion-header .icon {
@@ -549,9 +518,7 @@ button {
     left: 15px;
     transform: translateY(-50%);
     width: 20px;
-    /* Ancho del icono */
     height: 20px;
-    /* Altura del icono */
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -559,11 +526,9 @@ button {
 .accordion-header .arrow {
     position: absolute;
     top: calc(50% - 5px);
-    /* Ajuste para centrar verticalmente */
     right: 15px;
     transform: rotate(0deg);
     transform-origin: center;
-    /* Establece el punto de origen en el centro */
     width: 10px;
     height: 10px;
     background-image: url('/src/icon/arrowhead.png');
@@ -574,7 +539,6 @@ button {
 
 .accordion-header.active .arrow {
     transform: rotate(180deg);
-    /* Rotación para que apunte hacia arriba cuando está activo */
 }
 
 .accordion-header:hover {
@@ -591,14 +555,11 @@ button {
 
 .accordion-item.active .accordion-content {
     max-height: 500px;
-    /* Establece una altura máxima */
 }
-
 
 /* ------------------------------------------------------------------------------ */
 /* Footer */
 /* ------------------------------------------------------------------------------ */
-
 .footer {
     background-color: #1a1a1a;
     color: #f6f6f6;
@@ -664,7 +625,7 @@ button {
     justify-content: center;
 }
 
-.social-icons a:hover{
+.social-icons a:hover {
     background-color: #1AA0F2;
 }
 
@@ -680,38 +641,6 @@ button {
     margin-top: 20px;
 }
 
-
-
-/* ------------------------------------------------------------------------------ */
-/* LOGIN & REGISTER */
-/* ------------------------------------------------------------------------------ */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ------------------------------------------------------------------------------ */
 /* Media queries */
 /* ------------------------------------------------------------------------------ */
@@ -721,10 +650,6 @@ button {
     button#toggle-btn {
         display: none;
     }
-
-    /* nav {
-        display: none;
-    } */
 
     nav.show {
         display: block;
@@ -739,10 +664,8 @@ button {
     }
 }
 
-
 /* Dispositivos tablets */
 @media screen and (max-width: 1025px) {
-    /* Generales */
     .content-box {
         width: 70%;
     }
@@ -758,6 +681,7 @@ button {
         top: 100;
         left: 100;
     }
+
     nav ul li {
         display: block;
     }
@@ -785,9 +709,6 @@ button {
         width: 50%;
     }
 
-
-
-    /* Hero */
     .hero {
         justify-content: center;
         text-align: center;
@@ -800,20 +721,20 @@ button {
         align-items: center;
         max-width: 70%;
     }
-    
-    .hero .max-width{
+
+    .hero .max-width {
         width: 100%;
-     }
+    }
 
     .hero-buttons {
         justify-content: center;
     }
 
-    .hero-content h1{
+    .hero-content h1 {
         font-size: 4rem;
     }
 
-    .hero-content p{
+    .hero-content p {
         font-size: 1.5rem;
         padding: 1rem 0 6rem 0;
     }
@@ -828,8 +749,6 @@ button {
         justify-content: center;
     }
 
-
-    /* Productos */
     .planes {
         flex-direction: column;
         align-items: center;
@@ -840,22 +759,17 @@ button {
         margin-bottom: 30px;
     }
 
-
-    /* Cards */
     .containerflip {
-       flex-direction: column;
-       align-items: center;
-       justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
-    .card{
+    .card {
         width: 100%;
         height: 350px;
         margin: 20px 0;
     }
-
-
-    /* Header */
 
     .main-header {
         background-color: #f6f6f6;
@@ -866,7 +780,6 @@ button {
         font-weight: 600;
         color: #1a1a1a;
     }
-
 
     .container-header {
         max-width: 100%;
@@ -892,7 +805,9 @@ button {
         margin-left: 30px;
     }
 
-    .main-nav__toggle {
+    .main
+
+-nav__toggle {
         display: block;
     }
 
@@ -906,9 +821,6 @@ button {
         top: 80px;
     }
 
-
-
-    /* Footer */
     .footer-content {
         flex-direction: column;
         text-align: center;
@@ -924,52 +836,36 @@ button {
     }
 }
 
-
-
-/* Responsive Login & Register */
-
-
-
-
-
-
-
-
 /* Dispositivos móviles */
 @media screen and (max-width: 576px) {
-    /* Generales */
     .content-box {
         width: 90%;
     }
 
-    .content-box h1{
+    .content-box h1 {
         font-size: 2.5rem;
     }
-    
-    /* Hero */
+
     .hero-content {
         max-width: 90%;
         padding: 0;
     }
 
-    .hero-content h1{
+    .hero-content h1 {
         margin-top: 2rem;
         font-size: 2.5rem;
     }
 
-    .hero-content p{
+    .hero-content p {
         padding: 0.5rem 0;
         font-size: 1rem;
     }
 
-    .hero-buttons{
+    .hero-buttons {
         font-size: 12px;
     }
 
-
-
-    /* Cards */
-    .card{
+    .card {
         margin: 20px 0;
     }
 
@@ -984,7 +880,6 @@ button {
         font-size: 15px;
     }
 
-    /* Header */
     .main-nav__menu {
         left: 0;
         width: 100%;
