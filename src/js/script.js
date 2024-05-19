@@ -2,18 +2,15 @@
 // FUNCIONALIDAD FLECHA SCROLL
 //////////////////////////////////
 window.addEventListener('scroll', function() {
-    
-    // Capturamos los elementos a modificar
+    // Capturamos el elemento de la flecha flotante
     let floating_arrow = document.getElementById('floating_arrow');
 
-    // Si la posición de scroll supera cierto umbral, mostramos una flecha flotante
-    if ((this.window.scrollY > 500)&&(this.window.scrollY < 2800)){
-        floating_arrow.style.display = 'block';
+    // Si la posición de scroll supera cierto umbral, mostramos la flecha flotante
+    if ((this.window.scrollY > 500) && (this.window.scrollY < 2800)) {
+        floating_arrow.style.display = 'block'; // Mostrar la flecha flotante
+    } else {
+        floating_arrow.style.display = 'none'; // Ocultar la flecha flotante
     }
-    else{
-        floating_arrow.style.display = 'none';
-    }
-
 });
 
 ///////////////////////////////////
@@ -23,17 +20,18 @@ window.addEventListener('scroll', function() {
 document.addEventListener("DOMContentLoaded", function() {
     const accordionItems = document.querySelectorAll('.accordion-item');
     accordionItems.forEach(item => {
-        toggleArrow(item);
+        toggleArrow(item); // Ajustar flechas inicialmente
     });
 });
 
-// Al hacer clic en el acordeón, define el ítem como activo y muestra el contenido correspondiente
+// Capturamos todos los elementos del acordeón
 const accordionItems = document.querySelectorAll('.accordion-item');
 
+// Añadimos evento de clic a cada ítem del acordeón
 accordionItems.forEach(item => {
     item.addEventListener('click', () => {
-        item.classList.toggle('active');
-        toggleArrow(item);
+        item.classList.toggle('active'); // Alternar clase 'active'
+        toggleArrow(item); // Ajustar la flecha según el estado
     });
 });
 
@@ -47,63 +45,57 @@ function toggleArrow(item) {
 // FUNCIONALIDAD DEL HEADER COLOR SCROLL
 ///////////////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", function() {
-    const header = document.getElementById("main-header");
-    const logo = document.getElementById("logo");
+    const header = document.getElementById("main-header"); // Capturamos el header
+    const logo = document.getElementById("logo"); // Capturamos el logo
 
     window.addEventListener("scroll", function() {
         if (window.scrollY > 0 && window.innerWidth > 1025) {
-            header.classList.add("scrolled");
-            logo.src = "img/logo/logoMain.png";
-        }else if (window.innerWidth < 1025) {
-            logo.src = "img/logo/logoMain.png";
-        } 
-        else {
-            header.classList.remove("scrolled");
-            logo.src = "img/logo/logoMainB.png";
+            header.classList.add("scrolled"); // Añadir clase 'scrolled'
+            logo.src = "img/logo/logoMain.png"; // Cambiar la imagen del logo
+        } else if (window.innerWidth < 1025) {
+            logo.src = "img/logo/logoMain.png"; // Cambiar la imagen del logo
+        } else {
+            header.classList.remove("scrolled"); // Quitar clase 'scrolled'
+            logo.src = "img/logo/logoMainB.png"; // Cambiar la imagen del logo
         }
-        
     });
 });
- 
 
 ///////////////////////////////////////////////////
 // FUNCIONALIDAD DEL HEADER MENU HAMBURGUESA
 ///////////////////////////////////////////////////
-// Show menu
+// Capturamos los elementos del menú hamburguesa
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
       navClose = document.getElementById('nav-close');
 
-// Toggle Menu
+// Función para mostrar/ocultar el menú
 const toggleMenu = () => {
     if (navMenu.classList.contains('show-menu')) {
-        navMenu.classList.remove('show-menu');
+        navMenu.classList.remove('show-menu'); // Ocultar el menú
     } else {
-        navMenu.classList.add('show-menu');
+        navMenu.classList.add('show-menu'); // Mostrar el menú
     }
 };
 
-// Close Menu
+// Función para cerrar el menú
 const closeMenu = () => {
-    navMenu.classList.remove('show-menu');
+    navMenu.classList.remove('show-menu'); // Ocultar el menú
 };
 
-// Menu show
+// Añadimos eventos de clic a los botones de abrir/cerrar menú
 navToggle.addEventListener('click', toggleMenu);
-
-// Menu hidden
 navClose.addEventListener('click', toggleMenu);
 
-// Close menu when clicking on a nav link
+// Cerramos el menú al hacer clic en un enlace del menú
 const navLinks = document.querySelectorAll('#nav-menu a');
 navLinks.forEach(navLink => {
     navLink.addEventListener('click', closeMenu);
 });
 
- 
 ///////////////////////////////////////////////////
 // Listener para recargar la página cuando cambia el tamaño de la ventana
 ///////////////////////////////////////////////////
 window.addEventListener('resize', function() {
-    window.location.reload();
+    window.location.reload(); // Recargar la página
 });
