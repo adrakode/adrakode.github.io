@@ -6,9 +6,15 @@ window.addEventListener('scroll', function() {
     let floating_arrow = document.getElementById('floating_arrow');
 
     // Si la posición de scroll supera cierto umbral, mostramos la flecha flotante
-    if ((this.window.scrollY > 500) && (this.window.scrollY < 2800)) {
-        floating_arrow.style.display = 'block'; // Mostrar la flecha flotante
-    } else {
+
+    if (window.innerWidth > 1025){ //Para no mostrar en movil
+        if ((this.window.scrollY > 500) && (this.window.scrollY < 2800)) {
+            floating_arrow.style.display = 'block'; // Mostrar la flecha flotante
+        }
+        else {
+            floating_arrow.style.display = 'none'; // Ocultar la flecha flotante
+        }
+    } else{
         floating_arrow.style.display = 'none'; // Ocultar la flecha flotante
     }
 });
@@ -49,15 +55,19 @@ document.addEventListener("DOMContentLoaded", function() {
     const logo = document.getElementById("logo"); // Capturamos el logo
 
     window.addEventListener("scroll", function() {
-        if (window.scrollY > 0 && window.innerWidth > 1025) {
-            header.classList.add("scrolled"); // Añadir clase 'scrolled'
+
+        if(window.innerWidth > 1025){
+            if (window.scrollY > 0 && window.innerWidth > 1025) {
+                header.classList.add("scrolled"); // Añadir clase 'scrolled'
+                logo.src = "img/logo/logoMain.png"; // Cambiar la imagen del logo
+            } else {
+                header.classList.remove("scrolled"); // Quitar clase 'scrolled'
+                logo.src = "img/logo/logoMainB.png"; // Cambiar la imagen del logo
+            }
+        }else{
             logo.src = "img/logo/logoMain.png"; // Cambiar la imagen del logo
-        } else if (window.innerWidth < 1025) {
-            logo.src = "img/logo/logoMain.png"; // Cambiar la imagen del logo
-        } else {
-            header.classList.remove("scrolled"); // Quitar clase 'scrolled'
-            logo.src = "img/logo/logoMainB.png"; // Cambiar la imagen del logo
         }
+
     });
 });
 
