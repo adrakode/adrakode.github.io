@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addEventListener("scroll", function() {
 
-        if(window.innerWidth < 1025){
+        if(window.innerWidth > 1025){
             if (window.scrollY > 0 && window.innerWidth > 1025) {
                 header.classList.add("scrolled"); // Añadir clase 'scrolled'
                 logo.src = "img/logo/logoMain.png"; // Cambiar la imagen del logo
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }else{
             logo.src = "img/logo/logoMain.png"; // Cambiar la imagen del logo
         }
-        
+
     });
 });
 
