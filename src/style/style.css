@@ -205,7 +205,7 @@ button {
 /* HERO */
 /* ------------------------------------------------------------------------------ */
 .hero {
-    background-image: url('../img/hero/heroImg.png');
+    background-image: url('../img/hero/heroImg_extend.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -701,6 +701,7 @@ button {
 }
 
 /* Main Container Styles */
+
 .login_tituloLogin {
     margin-top: 4rem;
     text-align: center;
@@ -714,6 +715,7 @@ button {
     flex-wrap: wrap;
     text-align: center;
     padding: 20px;
+
 }
 
 .login_form-container {
@@ -756,7 +758,7 @@ button {
 
 .login_submit-button, .login_create-account-link {
     text-decoration: none;
-    color: #1a1a1a;
+    color: #f6f6f6;
     font-size: 1rem;
     font-weight: 600;
 }
@@ -795,6 +797,9 @@ button {
     display: flex;
     align-items: center;
     padding: 5px;
+    margin: 5px;
+    background-color: #fff;
+    border-radius: 10px;
 }
 
 .login_quick-login .login_login-option img {
